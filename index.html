@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>24 ชั่วโมงหลังปิดคูหา — ข้อมูลสถิติการรายงานคะแนน ECT Report 69</title>
+<title>24 ชั่วโมงหลังปิดคูหา — ข้อมูลประกอบบทความ ECT Report 69</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Noto Sans Thai',Arial,sans-serif;background:#f8f8f6;color:#1a1a1a;line-height:1.65}
@@ -87,78 +87,65 @@ tbody tr:nth-child(even){background:#fafafa}
 /* 2-col */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.75rem}
 /* Turnout table */
-.to-table{max-height:340px;overflow-y:auto}
 /* Divider */
 hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
-
-/* ══ Responsive ══════════════════════════════════════════ */
-
-/* กัน canvas ล้นจอทุกขนาดหน้าจอ */
-canvas           { max-width: 100%; }
-.section         { overflow: hidden; }
-
-/* ── iPhone / มือถือทั่วไป (≤600px) ─── */
-@media (max-width: 600px) {
-  .page            { padding: 1rem 0.75rem; }
-  .report-header   { padding: 1.25rem 1rem; border-radius: 6px; }
-  .report-title    { font-size: 17px; }
-  .report-sub      { font-size: 11px; }
-  .section         { padding: 1rem 0.75rem; }
-  .section-title   { font-size: 14px; }
-  .stat-val        { font-size: 16px; }
-  .stat-label      { font-size: 10px; }
-  /* Stats row → 2 คอลัมน์ (ใช้ !important เพราะบางตัวมี inline style ทับ) */
-  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 8px; }
-  /* Gap boxes และ 2-col → เรียงแนวตั้ง */
-  .gap-row         { grid-template-columns: 1fr; }
-  .two-col         { grid-template-columns: 1fr !important; }
-  /* ลดความสูง chart */
-  .chart-wrap      { height: 240px; }
-  .chart-wrap-sm   { height: 200px; }
-  .chart-wrap-md   { height: 220px; }
-  .chart-wrap-xs   { height: 150px; }
-  .chart-wrap-lg   { height: 300px; }
-  /* chart inline style ทั้งหมดในหน้า */
-  div[style*="height:480px"] { height: 300px !important; }
-  div[style*="height:280px"] { height: 220px !important; }
-  div[style*="height:240px"] { height: 200px !important; }
-  div[style*="height:160px"] { height: 140px !important; }
-  div[style*="height:140px"] { height: 130px !important; }
-  /* ตาราง scroll ซ้าย-ขวา */
-  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .to-table        { max-height: 260px; }
-  /* miss-grid ย่อ card เล็กลง */
-  .miss-grid       { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
-  /* legend ย่อ */
-  .legend          { font-size: 11px; gap: 10px; }
-  .section-desc    { font-size: 11px; }
+/* Chart height utility classes */
+.chart-tall{height:480px;position:relative;width:100%}
+.chart-med{height:240px;position:relative;width:100%}
+.chart-md2{height:280px;position:relative;width:100%}
+.chart-xs2{height:185px;position:relative;width:100%}
+.chart-xs3{height:165px;position:relative;width:100%}
+.chart-xs4{height:140px;position:relative;width:100%}
+/* Tables always scrollable */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.to-table{overflow-x:auto;-webkit-overflow-scrolling:touch;max-height:340px}
+.p-dp{background:#F3F4F6;color:#374151}
+.p-other{background:#F3F4F6;color:#374151}
+/* ── RESPONSIVE MOBILE ── */
+@media (max-width: 640px) {
+  .page{padding:.875rem .625rem}
+  .report-header{padding:1rem .875rem;border-radius:6px;margin-bottom:1.25rem}
+  .report-title{font-size:15px;line-height:1.4}
+  .report-sub{font-size:11px}
+  .section{padding:.875rem .75rem;border-radius:6px;margin-bottom:1rem}
+  .section-title{font-size:14px}
+  .section-desc{font-size:11px}
+  .stats-row{grid-template-columns:1fr 1fr !important;gap:7px !important}
+  .stat{padding:.6rem .75rem}
+  .stat-val{font-size:16px}
+  .stat-label,.stat-sub{font-size:10px}
+  .two-col,.gap-row{grid-template-columns:1fr !important;gap:.75rem !important}
+  .chart-wrap,.chart-wrap-md{height:220px}
+  .chart-wrap-sm{height:180px}
+  .chart-wrap-xs,.chart-xs4{height:140px}
+  .chart-tall{height:280px}
+  .chart-med,.chart-md2{height:200px}
+  .chart-xs2{height:155px}
+  .chart-xs3{height:145px}
+  table{min-width:360px;font-size:11px}
+  thead th{padding:4px 6px;font-size:10px}
+  tbody td{padding:4px 6px}
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .to-table{overflow-x:auto;-webkit-overflow-scrolling:touch;max-height:260px}
+  .to-table table,.tbl-wrap table{min-width:440px}
+  .miss-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #dotGrid div{width:10px !important;height:10px !important}
+  .legend{gap:8px;font-size:10px}
+  .sub-label{font-size:10px;margin:.6rem 0 .25rem}
+  .insight{padding:.65rem .75rem}
+  .i-orange .id,.i-red .id{font-size:11px}
+  .gb1 .gd,.gb2 .gd{font-size:11px}
+  .pct-bar-bg{min-width:30px !important}
+  .section-badge{font-size:9px;padding:2px 6px}
 }
-
-/* ── iPad แนวตั้ง (601px – 768px) ─── */
-@media (min-width: 601px) and (max-width: 768px) {
-  .page            { padding: 1.5rem 1rem; }
-  /* Stats row → 2 คอลัมน์ */
-  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 10px; }
-  /* 2-col และ gap-row → เรียงแนวตั้ง เพื่อ chart ไม่แคบเกินไป */
-  .gap-row         { grid-template-columns: 1fr; }
-  .two-col         { grid-template-columns: 1fr !important; }
-  .chart-wrap      { height: 340px; }
-  .chart-wrap-sm   { height: 240px; }
-  .chart-wrap-md   { height: 280px; }
-  .chart-wrap-lg   { height: 420px; }
-  div[style*="height:480px"] { height: 420px !important; }
-  div[style*="height:280px"] { height: 260px !important; }
-  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-}
-
-/* ── iPad แนวนอน (769px – 1024px) ─── */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .page            { padding: 1.5rem 1.25rem; }
-  .stats-row       { grid-template-columns: repeat(4, 1fr); }
-  .two-col         { grid-template-columns: 1fr 1fr; }
-  .chart-wrap      { height: 380px; }
-  .chart-wrap-sm   { height: 240px; }
-  .chart-wrap-md   { height: 300px; }
+@media (max-width: 400px) {
+  .page{padding:.75rem .5rem}
+  .stats-row{grid-template-columns:1fr 1fr !important}
+  .stat-val{font-size:14px}
+  .chart-tall{height:240px}
+  .chart-wrap,.chart-wrap-md{height:190px}
+  table{font-size:10px;min-width:320px}
+  .to-table table,.tbl-wrap table{min-width:400px}
 }
 </style>
 </head>
@@ -301,7 +288,7 @@ canvas           { max-width: 100%; }
   </div>
   <div style="position:relative;width:100%;height:280px"><canvas id="cPartyShareDiff"></canvas></div>
 
-  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1rem">
+  <div class="stats-row" class="stats-row" style="margin-top:1rem">
     <div class="stat" style="border-color:#185FA5">
       <div class="stat-label">BJT ณ 19:43</div><div class="stat-val" style="color:#185FA5">171 เขต</div>
       <div class="stat-sub">ครบ 175/175 เขตที่จะชนะ final</div>
@@ -331,7 +318,7 @@ canvas           { max-width: 100%; }
     ผู้มีสิทธิทุกคนได้รับบัตร 2 ใบพร้อมกัน จำนวนบัตรเขตและบัตรลิสต์จึงต้องเท่ากันเสมอ
     แต่พบผลต่างสูงสุด 906,825 ใบ และยังคงต่างกัน 37,883 ใบ ณ snapshot สุดท้าย
   </div>
-  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:.75rem">
+  <div class="stats-row" class="stats-row" style="margin-bottom:.75rem">
     <div class="stat" style="border-color:#C0392B">
       <div class="stat-label">ผลต่างสูงสุด ณ 20:49</div>
       <div class="stat-val" style="color:#C0392B">906,825</div>
@@ -355,13 +342,13 @@ canvas           { max-width: 100%; }
   </div>
 
   <div class="sub-label">ก.1 — ส่วนต่างบัตรเขต vs บัตรลิสต์ ตลอดการรายงาน (timeline)</div>
-  <div style="height:240px;position:relative"><canvas id="chart3a"></canvas></div>
+  <div class="chart-med" style="position:relative"><canvas id="chart3a"></canvas></div>
 
   <div class="two-col" style="margin-top:1rem">
     <div>
       <div class="sub-label">ก.2 — จังหวัดที่มีส่วนต่างรวมสูงสุด top 20</div>
       <div style="font-size:11px;color:#888;margin-bottom:.35rem">สีน้ำเงิน = บัตรเขต > บัตรลิสต์ · สีแดง = บัตรลิสต์ > บัตรเขต</div>
-      <div style="height:480px;position:relative"><canvas id="cProvDiffFull"></canvas></div>
+      <div class="chart-tall" style="position:relative"><canvas id="cProvDiffFull"></canvas></div>
     </div>
     <div>
       <div class="sub-label">ก.3 — เขตที่มีส่วนต่างมากสุด (top 20)</div>
@@ -384,7 +371,7 @@ canvas           { max-width: 100%; }
   <div class="section-desc" style="margin-bottom:.75rem">
     valid_votes มากกว่า turn_out เป็นไปไม่ได้ทางคณิตศาสตร์ — ปรากฏ 3 snapshot แล้วหายไปเองที่ 22:49 ไม่มีคำอธิบาย
   </div>
-  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:.75rem">
+  <div class="stats-row" class="stats-row" style="margin-bottom:.75rem">
     <div class="stat" style="border-color:#E67E22">
       <div class="stat-label">ณ 22:35</div>
       <div class="stat-val" style="color:#E67E22">47 เขต</div>
@@ -407,12 +394,12 @@ canvas           { max-width: 100%; }
     </div>
   </div>
 
-  <div style="height:140px;position:relative;margin-bottom:.75rem"><canvas id="chart3b"></canvas></div>
+  <div class="chart-xs4" style="margin-bottom:.75rem;position:relative"><canvas id="chart3b"></canvas></div>
 
   <div class="two-col" style="margin-top:.5rem">
     <div>
       <div class="sub-label">ข.1 — excess แยกตามจังหวัด ณ 22:39</div>
-      <div style="height:480px;position:relative"><canvas id="cVgtProvFull"></canvas></div>
+      <div class="chart-tall" style="position:relative"><canvas id="cVgtProvFull"></canvas></div>
     </div>
     <div>
       <div class="sub-label">ข.2 — 49 เขตที่ valid &gt; turnout ณ 22:39</div>
@@ -431,7 +418,7 @@ canvas           { max-width: 100%; }
   </div>
 
   <div class="sub-label" style="margin-top:1rem">ข.3 — ผู้ชนะในเขต valid &gt; turnout แยกตามพรรค ณ 22:39</div>
-  <div style="height:160px;position:relative"><canvas id="cVgtPartyFull"></canvas></div>
+  <div class="chart-wrap-xs" style=""><canvas id="cVgtPartyFull"></canvas></div>
 
   <div class="insight i-red" style="margin-top:.75rem">
     <div class="it">ผลการวิเคราะห์: พบความผิดปกติเชิงตรรกะร้ายแรง 2 ประเด็น</div>
@@ -664,168 +651,344 @@ function makeGapPlugin(i0,i1,i2,i3){
 }
 
 // ═══════════════════════════════════════════════════
-// TURNOUT CHART — linear scale (x = minutes from 16:48)
+// TURNOUT CHART — จาก cumulative_turnout_flatline (47 snapshots, categorical x-axis)
 // ═══════════════════════════════════════════════════
+var turnoutSnaps = [
+  {t:'16:48', v:559,      p:0},
+  {t:'16:58', v:559,      p:0},
+  {t:'17:08', v:559,      p:0},
+  {t:'17:18', v:559,      p:0},
+  {t:'17:28', v:559,      p:0},
+  {t:'17:38', v:771,      p:0},
+  {t:'17:48', v:2477,     p:0},
+  {t:'17:58', v:7202,     p:107},
+  {t:'18:08', v:23940,    p:2704},
+  {t:'18:18', v:60706,    p:9473},
+  {t:'18:28', v:127518,   p:28246},
+  {t:'18:38', v:234684,   p:73197},
+  {t:'18:48', v:386813,   p:158338},
+  {t:'18:58', v:583528,   p:300442},
+  {t:'19:08', v:846558,   p:501969},
+  {t:'19:18', v:1190289,  p:788083},
+  {t:'19:28', v:1607272,  p:1139184},
+  {t:'19:38', v:2094628,  p:1578130},
+  {t:'19:43', v:2367193,  p:1813220},
+  {t:'20:38', v:8016176,  p:7123672},
+  {t:'20:49', v:9789994,  p:8883169},
+  {t:'22:35', v:26843450, p:26447119},
+  {t:'22:39', v:27213312, p:26842766},
+  {t:'22:45', v:27764570, p:27435760},
+  {t:'22:49', v:28819656, p:28479758},
+  {t:'22:51', v:28995316, p:28661715},
+  {t:'23:01', v:29805280, p:29508425},
+  {t:'23:07', v:30228274, p:29992977},
+  {t:'23:13', v:30632155, p:30383128},
+  {t:'23:15', v:30753657, p:30519627},
+  {t:'23:17', v:30866552, p:30636997},
+  {t:'23:21', v:31084634, p:30868411},
+  {t:'23:23', v:31189558, p:30994438},
+  {t:'23:27', v:31371202, p:31178573},
+  {t:'23:31', v:31566500, p:31369277},
+  {t:'23:43', v:32001816, p:31867545},
+  {t:'23:59', v:32465124, p:32344636},
+  {t:'00:17+', v:32876585, p:32761489},
+  {t:'00:33+', v:33189841, p:33087482},
+  {t:'00:41+', v:33331360, p:33244650},
+  {t:'01:01+', v:33626831, p:33540766},
+  {t:'01:15+', v:33838568, p:33768802},
+  {t:'01:59+', v:34162999, p:34120655},
+  {t:'02:59+', v:34318732, p:34281188},
+  {t:'03:59+', v:34389998, p:34349300},
+  {t:'08:53+', v:34434497, p:34394820},
+  {t:'15:51+', v:34527431, p:34489548}
+];
+
 (function(){
-  // แสดงเฉพาะจุดถึง 03:59 เพื่อไม่ให้ช่วงก่อน GAP1 แคบเกินไป
-  // (จุด 08:53+ และ 15:51+ ยังอยู่ในตาราง)
-  var DISPLAY_MAX = 37; // index สุดท้ายที่แสดงบนกราฟ (03:59+)
-  var G1_PRE=18, G1_POST=19, G2_PRE=20, G2_POST=21;
-  var M=function(v){return parseFloat((v/1e6).toFixed(4));};
+var snaps = turnoutSnaps;
+var N = snaps.length;
+var FINAL = FINAL_TO;
+var I_PRE_G1  = 18;
+var I_POST_G1 = 19;
+var I_PRE_G2  = 20;
+var I_POST_G2 = 21;
 
-  // x = minutes จาก 16:48 (ตรงกับ ms ที่คำนวณไว้แล้ว แต่ใช้นาทีแทน)
-  var MIN=[0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,175,
-           230,241,347,351,357,361,363,373,379,385,399,415,431,449,473,507,551,611,671];
-  // label แต่ละจุด
-  var LBLS=['16:48','16:58','17:08','17:18','17:28','17:38','17:48','17:58',
-            '18:08','18:18','18:28','18:38','18:48','18:58','19:08','19:18',
-            '19:28','19:38','19:43','20:38','20:49',
-            '22:35','22:39','22:45','22:49','22:51','23:01','23:07','23:13',
-            '23:27','23:43','23:59','00:17+','00:41+','01:15+','01:59+','02:59+','03:59+'];
+function M(v){ return parseFloat((v/1e6).toFixed(4)); }
 
-  var ds=snaps.slice(0,DISPLAY_MAX+1);
+// ── Chart datasets ──
+// แทรก dummy labels ใน gap zones เพื่อให้ gap กว้างขึ้น
+// D1=2 dummies ใน GAP1, D2=4 dummies ใน GAP2
+var D1 = 2, D2 = 4;
 
-  // เส้นหลัก: null ที่ G1_POST (20:38) และ G2_POST (22:35)
-  // ทำให้เส้นหลักแบ่งเป็น 3 ท่อน: ก่อน gap1 | ระหว่าง gap1-gap2 | หลัง gap2
-  // แต่ spanning null ทำให้ท่อนกลาง (G1_POST–G2_PRE) ไม่ติดกัน
-  // จึงใช้ dataset แยกสำหรับช่วง 20:38–20:49
-  var mainV=ds.map(function(s,i){
-    if(i===G1_POST||i===G2_POST) return null;
-    return M(s.v);
-  });
-  var mainP=ds.map(function(s,i){
-    if(i===G1_POST||i===G2_POST) return null;
-    return M(s.p);
-  });
+// สร้าง labels ใหม่โดยแทรก dummy ว่าง
+var origLabels = snaps.map(function(s){return s.t;});
+var labels = origLabels.slice(0,19)
+  .concat(['',''])                    // GAP1 dummies
+  .concat(origLabels.slice(19,21))    // 20:38, 20:49
+  .concat(['','','',''])              // GAP2 dummies
+  .concat(origLabels.slice(21));      // 22:35 ถึง 15:51+
 
-  // dataset สำหรับช่วง 20:38–20:49 (ระหว่าง gap1 และ gap2)
-  var betweenV=ds.map(function(s,i){
-    if(i===G1_POST||i===G2_PRE) return M(s.v);
-    return null;
-  });
-  var betweenP=ds.map(function(s,i){
-    if(i===G1_POST||i===G2_PRE) return M(s.p);
-    return null;
-  });
+var I_PRE_G1  = 18;   // 19:43
+var I_POST_G1 = 21;   // 20:38
+var I_PRE_G2  = 22;   // 20:49
+var I_POST_G2 = 27;   // 22:35
 
-  // เส้น flatline ช่วง gap1 (19:43 → 20:38)
-  var g1V=ds.map(function(s,i){
-    if(i===G1_PRE) return M(s.v);
-    if(i===G1_POST) return M(snaps[G1_PRE].v);
-    return null;
-  });
-  var g1P=ds.map(function(s,i){
-    if(i===G1_PRE) return M(s.p);
-    if(i===G1_POST) return M(snaps[G1_PRE].p);
-    return null;
-  });
-  // เส้น flatline ช่วง gap2 (20:49 → 22:35)
-  var g2V=ds.map(function(s,i){
-    if(i===G2_PRE) return M(s.v);
-    if(i===G2_POST) return M(snaps[G2_PRE].v);
-    return null;
-  });
-  var g2P=ds.map(function(s,i){
-    if(i===G2_PRE) return M(s.p);
-    if(i===G2_POST) return M(snaps[G2_PRE].p);
-    return null;
-  });
+// helper: map label index → original snap index
+function origIdx(li){
+  if(li <= 18) return li;
+  if(li <= 20) return null;      // gap1 dummies
+  if(li === 21) return 19;       // 20:38
+  if(li === 22) return 20;       // 20:49
+  if(li <= 26) return null;      // gap2 dummies
+  return li - (D1 + D2);        // 22:35 ถึง 15:51+
+}
 
-  var xVals=MIN.slice(0,DISPLAY_MAX+1);
+var N_EXT = labels.length;
 
-  // Gap shading plugin — ใช้ค่า x = minutes
-  var gapPlugin={id:'gpm',beforeDraw:function(ch){
-    var ctx=ch.ctx,sc=ch.scales.x,t=ch.chartArea.top,b=ch.chartArea.bottom;
-    function sh(x0min,x1min,col){
-      var px0=sc.getPixelForValue(x0min), px1=sc.getPixelForValue(x1min);
+// เส้นหลัก: null บน dummy positions และ I_POST_G1 (20:38) เท่านั้น
+// I_POST_G2 (22:35) ต้องมีค่า เพราะเป็นจุดแรกหลัง GAP2 ไม่ใช่จุดใน gap
+var linV = [];
+var linP = [];
+for(var i=0;i<N_EXT;i++){
+  var oi = origIdx(i);
+  if(oi===null || i===I_POST_G1){
+    linV.push(null); linP.push(null);
+  } else {
+    linV.push(M(snaps[oi].v));
+    linP.push(M(snaps[oi].p));
+  }
+}
+
+// เส้นเชื่อม 20:38→20:49 (segment ระหว่าง gap1-gap2)
+var betweenV = [], betweenP = [];
+for(var i=0;i<N_EXT;i++){
+  if(i===I_POST_G1 || i===I_PRE_G2){
+    var oi=origIdx(i);
+    betweenV.push(M(snaps[oi].v));
+    betweenP.push(M(snaps[oi].p));
+  } else { betweenV.push(null); betweenP.push(null); }
+}
+
+// เส้น flatline GAP1: ค่าคงที่จาก I_PRE_G1 ถึง I_POST_G1
+var stepG1V = [], stepG1P = [];
+for(var i=0;i<N_EXT;i++){
+  if(i>=I_PRE_G1 && i<=I_POST_G1){
+    stepG1V.push(M(snaps[18].v));
+    stepG1P.push(M(snaps[18].p));
+  } else { stepG1V.push(null); stepG1P.push(null); }
+}
+
+// เส้น flatline GAP2: ค่าคงที่จาก I_PRE_G2 ถึง I_POST_G2
+var stepG2V = [], stepG2P = [];
+for(var i=0;i<N_EXT;i++){
+  if(i>=I_PRE_G2 && i<=I_POST_G2){
+    stepG2V.push(M(snaps[20].v));
+    stepG2P.push(M(snaps[20].p));
+  } else { stepG2V.push(null); stepG2P.push(null); }
+}
+
+// pointRadius arrays
+var prMain = [], prBetween = [];
+for(var i=0;i<N_EXT;i++){
+  var oi=origIdx(i);
+  if(i===I_PRE_G1 || i===I_PRE_G2) prMain.push(5);
+  else if(i===I_POST_G1 || i===I_POST_G2) prMain.push(0);
+  else if(oi===null) prMain.push(0);
+  else prMain.push(2.5);
+  // between segment: show point at both ends
+  if(i===I_POST_G1 || i===I_PRE_G2) prBetween.push(4);
+  else prBetween.push(0);
+}
+var prLinP = [];
+for(var i=0;i<N_EXT;i++){
+  var oi=origIdx(i);
+  if(i===I_POST_G1||i===I_POST_G2||oi===null) prLinP.push(0);
+  else prLinP.push(2);
+}
+
+// ── Gap shade plugin ──
+var gapShadePlugin = {
+  id:'gapShade',
+  beforeDraw: function(chart){
+    var ctx    = chart.ctx;
+    var x      = chart.scales.x;
+    var top    = chart.chartArea.top;
+    var bottom = chart.chartArea.bottom;
+    function shade(i0, i1, hex){
+      var x0 = x.getPixelForValue(i0);
+      var x1 = x.getPixelForValue(i1);
       ctx.save();
-      ctx.fillStyle=col+'22'; ctx.fillRect(px0,t,px1-px0,b-t);
-      ctx.strokeStyle=col; ctx.lineWidth=1.4; ctx.setLineDash([5,4]);
-      ctx.beginPath(); ctx.moveTo(px0,t); ctx.lineTo(px0,b); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(px1,t); ctx.lineTo(px1,b); ctx.stroke();
-      ctx.setLineDash([]); ctx.restore();
+      ctx.fillStyle = hex + '18';
+      ctx.fillRect(x0, top, x1 - x0, bottom - top);
+      ctx.strokeStyle = hex;
+      ctx.lineWidth   = 1.5;
+      ctx.setLineDash([5, 4]);
+      ctx.beginPath(); ctx.moveTo(x0, top); ctx.lineTo(x0, bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x1, top); ctx.lineTo(x1, bottom); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
     }
-    sh(MIN[G1_PRE], MIN[G1_POST], '#E67E22');
-    sh(MIN[G2_PRE], MIN[G2_POST], '#C0392B');
-  }};
+    shade(I_PRE_G1, I_POST_G1, '#E67E22');
+    shade(I_PRE_G2, I_POST_G2, '#C0392B');
+  }
+};
 
-  new Chart(document.getElementById('cTurnout'),{
-    type:'line', plugins:[gapPlugin],
-    data:{
-      labels:xVals,
-      datasets:[
-        {label:'ส.ส.เขต',data:mainV,borderColor:'#2E8B57',backgroundColor:'rgba(46,139,87,0.07)',
-         borderWidth:2.5,pointRadius:xVals.map(function(x,i){
-           return(i===G1_PRE||i===G2_PRE)?5:2;
-         }),pointBackgroundColor:'#2E8B57',fill:true,tension:0.3,spanGaps:false,order:3},
-        {label:'ส.ส.บัญชีรายชื่อ',data:mainP,borderColor:'#E91E8C',borderWidth:2,
-         pointRadius:1.5,pointBackgroundColor:'#E91E8C',
-         fill:false,tension:0.3,spanGaps:false,order:3},
-        {label:'_bv',data:betweenV,borderColor:'#2E8B57',borderWidth:2.5,
-         pointRadius:xVals.map(function(x,i){return i===G1_POST?5:i===G2_PRE?5:0;}),
-         pointBackgroundColor:'#2E8B57',fill:false,tension:0.3,spanGaps:false,order:3},
-        {label:'_bp',data:betweenP,borderColor:'#E91E8C',borderWidth:2,
-         pointRadius:0,fill:false,tension:0.3,spanGaps:false,order:3},
-        {label:'_g1v',data:g1V,borderColor:'#2E8B57',borderWidth:2.5,borderDash:[9,5],
-         pointRadius:xVals.map(function(x,i){return i===G1_POST?7:0;}),
-         pointBackgroundColor:'#E67E22',fill:false,tension:0,spanGaps:false,order:1},
-        {label:'_g1p',data:g1P,borderColor:'#E91E8C',borderWidth:1.8,borderDash:[9,5],
-         pointRadius:0,fill:false,tension:0,spanGaps:false,order:1},
-        {label:'_g2v',data:g2V,borderColor:'#2E8B57',borderWidth:2.5,borderDash:[9,5],
-         pointRadius:xVals.map(function(x,i){return i===G2_POST?7:0;}),
-         pointBackgroundColor:'#C0392B',fill:false,tension:0,spanGaps:false,order:1},
-        {label:'_g2p',data:g2P,borderColor:'#E91E8C',borderWidth:1.8,borderDash:[9,5],
-         pointRadius:0,fill:false,tension:0,spanGaps:false,order:1}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{
-        filter:function(i){return i.dataset.label&&!i.dataset.label.startsWith('_')&&i.raw!==null;},
-        callbacks:{
-          title:function(it){
-            if(!it||!it.length)return'';
-            var idx=it[0].dataIndex;
-            return LBLS[idx]||'';
+// ── สร้าง chart ──
+var ctx = document.getElementById('cTurnout');
+
+new Chart(ctx, {
+  type: 'line',
+  plugins: [gapShadePlugin],
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: 'ส.ส.เขต',
+        data: linV,
+        borderColor: '#2E8B57',
+        backgroundColor: 'rgba(46,139,87,0.07)',
+        borderWidth: 2.5,
+        pointRadius: prMain,
+        pointBackgroundColor: '#2E8B57',
+        fill: true, tension: 0.3, stepped: false, spanGaps: false, order: 3
+      },
+      {
+        label: 'ส.ส.บัญชีรายชื่อ',
+        data: linP,
+        borderColor: '#E91E8C', borderWidth: 2,
+        pointRadius: prLinP,
+        pointBackgroundColor: '#E91E8C',
+        fill: false, tension: 0.3, stepped: false, spanGaps: false, order: 3
+      },
+      {
+        label: 'ส.ส.เขต (ระหว่าง gap)',
+        data: betweenV,
+        borderColor: '#2E8B57', borderWidth: 2.5,
+        pointRadius: prBetween,
+        pointBackgroundColor: '#2E8B57',
+        fill: false, tension: 0, spanGaps: false, order: 3
+      },
+      {
+        label: 'ส.ส.บัญชีรายชื่อ (ระหว่าง gap)',
+        data: betweenP,
+        borderColor: '#E91E8C', borderWidth: 2,
+        pointRadius: [0],
+        fill: false, tension: 0, spanGaps: false, order: 3
+      },
+      {
+        label: '_g1v', data: stepG1V,
+        borderColor: '#2E8B57', borderWidth: 2.5, borderDash: [9,5],
+        pointRadius: labels.map(function(l,i){return i===I_POST_G1?8:0;}),
+        pointBackgroundColor: '#E67E22',
+        fill: false, stepped: true, spanGaps: false, order: 1
+      },
+      {
+        label: '_g1p', data: stepG1P,
+        borderColor: '#E91E8C', borderWidth: 2, borderDash: [9,5],
+        pointRadius: labels.map(function(l,i){return i===I_POST_G1?6:0;}),
+        pointBackgroundColor: '#E91E8C',
+        fill: false, stepped: true, spanGaps: false, order: 1
+      },
+      {
+        label: '_g2v', data: stepG2V,
+        borderColor: '#2E8B57', borderWidth: 2.5, borderDash: [9,5],
+        pointRadius: labels.map(function(l,i){return i===I_POST_G2?8:0;}),
+        pointBackgroundColor: '#C0392B',
+        fill: false, stepped: true, spanGaps: false, order: 1
+      },
+      {
+        label: '_g2p', data: stepG2P,
+        borderColor: '#E91E8C', borderWidth: 2, borderDash: [9,5],
+        pointRadius: labels.map(function(l,i){return i===I_POST_G2?6:0;}),
+        pointBackgroundColor: '#E91E8C',
+        fill: false, stepped: true, spanGaps: false, order: 1
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        filter: function(item){
+          if(!item.dataset.label) return false;
+          if(item.dataset.label.charAt(0)==='_') return false;
+          if(item.raw===null||item.raw===undefined) return false;
+          return true;
+        },
+        callbacks: {
+          title: function(items) {
+            if(!items||items.length===0) return '';
+            var li = items[0].dataIndex;
+            // map back to original snap
+            var oi = (li<=18)?li:(li===21)?19:(li===22)?20:(li>=27)?(li-6):null;
+            return (oi!==null && snaps[oi]) ? snaps[oi].t : '';
           },
-          label:function(i){if(i.raw===null)return null;return ' '+i.dataset.label+': '+Number(i.raw).toFixed(3)+'M';},
-          afterBody:function(it){
-            if(!it||!it.length)return[];
-            var idx=it[0].dataIndex,s=snaps[idx];if(!s)return[];
-            var pct=(s.v/FINAL_TO*100).toFixed(2);
-            var delta=idx===0?s.v:s.v-snaps[idx-1].v;
-            var dp=(delta/FINAL_TO*100).toFixed(2);
-            var lines=[' % สะสม: '+pct+'%',' +เพิ่ม: +'+delta.toLocaleString()+' (+'+dp+'%)'];
-            if(idx===G1_POST)lines.push(' ⚠ กระโดด +5.65M หลัง GAP 1 (55 นาที)');
-            if(idx===G2_POST)lines.push(' ⚠ กระโดด +17.05M หลัง GAP 2 (106 นาที)');
+          label: function(item) {
+            if(!item) return null;
+            var lbl = item.dataset.label;
+            if(lbl.charAt(0)==='_') return null;
+            if(item.raw===null||item.raw===undefined) return null;
+            // simplify label
+            var display = (lbl.indexOf('ระหว่าง')>=0)
+              ? lbl.replace(' (ระหว่าง gap)','')
+              : lbl;
+            return ' ' + display + ': ' + Number(item.raw).toFixed(3) + 'M';
+          },
+          afterBody: function(items) {
+            if(!items||items.length===0) return [];
+            var li = items[0].dataIndex;
+            var oi = (li<=18)?li:(li===21)?19:(li===22)?20:(li>=27)?(li-6):null;
+            if(oi===null||!snaps[oi]) return [];
+            var s    = snaps[oi];
+            var pct  = (s.v / FINAL * 100).toFixed(2);
+            var delta = oi === 0 ? s.v : s.v - snaps[oi-1].v;
+            var dPct  = (delta / FINAL * 100).toFixed(2);
+            var lines = [
+              ' ─────────────────',
+              ' % สะสม: ' + pct + '% ของ final',
+              ' +เพิ่มจาก snapshot ก่อน: +' + delta.toLocaleString() + ' (+' + dPct + '%)'
+            ];
+            if(oi === 19) lines.push(' ⚠ กระโดด +5.65M หลังหยุด 55 นาที (GAP 1)');
+            if(oi === 21) lines.push(' ⚠ กระโดด +17.05M หลังหยุด 106 นาที (GAP 2)');
+            if(s.v > 0 && s.p > 0){
+              var diff = ((s.v - s.p)/1000).toFixed(1);
+              lines.push(' ผลต่าง เขต−ลิสต์: ' + diff + 'K คน');
+            }
             return lines;
           }
         }
-      }},
-      scales:{
-        x:{type:'linear',
-           ticks:{font:{size:9},maxRotation:50,autoSkip:true,maxTicksLimit:22,
-             callback:function(val){
-               var idx=xVals.indexOf(val);
-               return idx>=0?LBLS[idx]:'';
-             }
-           },
-           grid:{color:'rgba(0,0,0,0.04)'},
-           title:{display:false}
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          font:{size:9}, color:'#555', maxRotation:60, autoSkip:false,
+          callback: function(val, index){
+            // ซ่อน label ของ dummy positions
+            return labels[index] || null;
+          }
         },
-        y:{ticks:{callback:function(v){return v.toFixed(1)+'M';},font:{size:10}},
-           grid:{color:'rgba(0,0,0,0.05)'},
-           title:{display:true,text:'จำนวนผู้ใช้สิทธิ์ (ล้านคน)',font:{size:10}}}
+        grid: { color:'rgba(0,0,0,0.04)' }
+      },
+      y: {
+        title: { display:true, text:'จำนวนผู้ใช้สิทธิ์ (ล้านคน)', font:{size:11}, color:'#555' },
+        ticks: { callback:function(v){return v.toFixed(1)+'M';}, font:{size:10}, color:'#555' },
+        grid: { color:'rgba(0,0,0,0.05)' }
       }
     }
-  });
+  }
+});
+
   // Turnout table
   var tbody=document.getElementById('turnoutBody');
   snaps.forEach(function(s,i){
-    var pct=(s.v/FINAL_TO*100).toFixed(3);
+    var pct=(s.v/FINAL*100).toFixed(3);
     var delta=i===0?s.v:s.v-snaps[i-1].v;
-    var dp=(delta/FINAL_TO*100).toFixed(3);
+    var dp=(delta/FINAL*100).toFixed(3);
     var isFlat=i>0&&s.v===snaps[i-1].v;
-    var isG1=i===G1_POST, isG2=i===G2_POST;
+    var isG1=i===I_POST_G1, isG2=i===I_POST_G2;
     var tag='';
     if(isG1) tag='<span class="tag tag-g1">JUMP GAP1</span>';
     else if(isG2) tag='<span class="tag tag-g2">JUMP GAP2</span>';
