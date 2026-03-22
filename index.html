@@ -26,7 +26,6 @@ body{font-family:'Noto Sans Thai',Arial,sans-serif;background:#f8f8f6;color:#1a1
 .chart-wrap-sm{position:relative;width:100%;height:260px}
 .chart-wrap-md{position:relative;width:100%;height:320px}
 .chart-wrap-xs{position:relative;width:100%;height:180px}
-.chart-wrap-lg{position:relative;width:100%;height:480px}
 /* Stats row */
 .stats-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:1rem 0}
 .stat{background:#f5f5f3;border-radius:8px;padding:.75rem 1rem;border-left:3px solid}
@@ -91,16 +90,86 @@ tbody tr:nth-child(even){background:#fafafa}
 .to-table{max-height:340px;overflow-y:auto}
 /* Divider */
 hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
+
+/* ══ Responsive ══════════════════════════════════════════ */
+
+/* กัน canvas ล้นจอทุกขนาดหน้าจอ */
+canvas           { max-width: 100%; }
+.section         { overflow: hidden; }
+
+/* ── iPhone / มือถือทั่วไป (≤600px) ─── */
+@media (max-width: 600px) {
+  .page            { padding: 1rem 0.75rem; }
+  .report-header   { padding: 1.25rem 1rem; border-radius: 6px; }
+  .report-title    { font-size: 17px; }
+  .report-sub      { font-size: 11px; }
+  .section         { padding: 1rem 0.75rem; }
+  .section-title   { font-size: 14px; }
+  .stat-val        { font-size: 16px; }
+  .stat-label      { font-size: 10px; }
+  /* Stats row → 2 คอลัมน์ (ใช้ !important เพราะบางตัวมี inline style ทับ) */
+  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 8px; }
+  /* Gap boxes และ 2-col → เรียงแนวตั้ง */
+  .gap-row         { grid-template-columns: 1fr; }
+  .two-col         { grid-template-columns: 1fr !important; }
+  /* ลดความสูง chart */
+  .chart-wrap      { height: 240px; }
+  .chart-wrap-sm   { height: 200px; }
+  .chart-wrap-md   { height: 220px; }
+  .chart-wrap-xs   { height: 150px; }
+  .chart-wrap-lg   { height: 300px; }
+  /* chart inline style ทั้งหมดในหน้า */
+  div[style*="height:480px"] { height: 300px !important; }
+  div[style*="height:280px"] { height: 220px !important; }
+  div[style*="height:240px"] { height: 200px !important; }
+  div[style*="height:160px"] { height: 140px !important; }
+  div[style*="height:140px"] { height: 130px !important; }
+  /* ตาราง scroll ซ้าย-ขวา */
+  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .to-table        { max-height: 260px; }
+  /* miss-grid ย่อ card เล็กลง */
+  .miss-grid       { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  /* legend ย่อ */
+  .legend          { font-size: 11px; gap: 10px; }
+  .section-desc    { font-size: 11px; }
+}
+
+/* ── iPad แนวตั้ง (601px – 768px) ─── */
+@media (min-width: 601px) and (max-width: 768px) {
+  .page            { padding: 1.5rem 1rem; }
+  /* Stats row → 2 คอลัมน์ */
+  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  /* 2-col และ gap-row → เรียงแนวตั้ง เพื่อ chart ไม่แคบเกินไป */
+  .gap-row         { grid-template-columns: 1fr; }
+  .two-col         { grid-template-columns: 1fr !important; }
+  .chart-wrap      { height: 340px; }
+  .chart-wrap-sm   { height: 240px; }
+  .chart-wrap-md   { height: 280px; }
+  .chart-wrap-lg   { height: 420px; }
+  div[style*="height:480px"] { height: 420px !important; }
+  div[style*="height:280px"] { height: 260px !important; }
+  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* ── iPad แนวนอน (769px – 1024px) ─── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page            { padding: 1.5rem 1.25rem; }
+  .stats-row       { grid-template-columns: repeat(4, 1fr); }
+  .two-col         { grid-template-columns: 1fr 1fr; }
+  .chart-wrap      { height: 380px; }
+  .chart-wrap-sm   { height: 240px; }
+  .chart-wrap-md   { height: 300px; }
+}
 </style>
 </head>
 <body>
 <div class="page">
 
 <div class="report-header">
-  <div class="report-title">ข้อมูลสถิติการรายงานคะแนน ECT Report 69</div>
+  <div class="report-title">24 ชั่วโมงหลังปิดคูหา — ข้อมูลสถิติการรายงานคะแนน ECT Report 69</div>
   <div class="report-sub">
     การเลือกตั้ง 8 กุมภาพันธ์ 2569 · วิเคราะห์จาก 47 snapshot ของระบบ ECT Report 69<br>
-    ครอบคลุม 3 ช่วง: ก่อน GAP 1 · ระหว่าง GAP 1–2 · หลัง GAP 2
+    ครอบคลุม 3 ช่วง: ก่อน GAP 1 · ช่วง GAP 1–2 · หลัง GAP 2
   </div>
 </div>
 
@@ -230,7 +299,7 @@ hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
   <div class="section-desc" style="margin-bottom:.5rem">
     ค่าบวก = สัดส่วน ณ ช่วงนั้นสูงกว่า final · ค่าลบ = ต่ำกว่า final · เส้นประ = เส้นศูนย์
   </div>
-<div class="chart-wrap-md"><canvas id="cPartyShareDiff"></canvas></div>
+  <div style="position:relative;width:100%;height:280px"><canvas id="cPartyShareDiff"></canvas></div>
 
   <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1rem">
     <div class="stat" style="border-color:#185FA5">
@@ -286,13 +355,13 @@ hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
   </div>
 
   <div class="sub-label">ก.1 — ส่วนต่างบัตรเขต vs บัตรลิสต์ ตลอดการรายงาน (timeline)</div>
-  <div class="chart-wrap-sm"><canvas id="chart3a"></canvas></div>
+  <div style="height:240px;position:relative"><canvas id="chart3a"></canvas></div>
 
   <div class="two-col" style="margin-top:1rem">
     <div>
       <div class="sub-label">ก.2 — จังหวัดที่มีส่วนต่างรวมสูงสุด top 20</div>
       <div style="font-size:11px;color:#888;margin-bottom:.35rem">สีน้ำเงิน = บัตรเขต > บัตรลิสต์ · สีแดง = บัตรลิสต์ > บัตรเขต</div>
-      <div class="chart-wrap-lg"><canvas id="cProvDiffFull"></canvas></div>
+      <div style="height:480px;position:relative"><canvas id="cProvDiffFull"></canvas></div>
     </div>
     <div>
       <div class="sub-label">ก.3 — เขตที่มีส่วนต่างมากสุด (top 20)</div>
@@ -338,12 +407,12 @@ hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
     </div>
   </div>
 
-  <div class="chart-wrap-xs" style="margin-bottom:.75rem"><canvas id="chart3b"></canvas></div>
+  <div style="height:140px;position:relative;margin-bottom:.75rem"><canvas id="chart3b"></canvas></div>
 
   <div class="two-col" style="margin-top:.5rem">
     <div>
       <div class="sub-label">ข.1 — excess แยกตามจังหวัด ณ 22:39</div>
-      <div class="chart-wrap-lg"><canvas id="cVgtProvFull"></canvas></div>
+      <div style="height:480px;position:relative"><canvas id="cVgtProvFull"></canvas></div>
     </div>
     <div>
       <div class="sub-label">ข.2 — 49 เขตที่ valid &gt; turnout ณ 22:39</div>
@@ -362,7 +431,7 @@ hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
   </div>
 
   <div class="sub-label" style="margin-top:1rem">ข.3 — ผู้ชนะในเขต valid &gt; turnout แยกตามพรรค ณ 22:39</div>
-  <div class="chart-wrap-xs"><canvas id="cVgtPartyFull"></canvas></div>
+  <div style="height:160px;position:relative"><canvas id="cVgtPartyFull"></canvas></div>
 
   <div class="insight i-red" style="margin-top:.75rem">
     <div class="it">ผลการวิเคราะห์: พบความผิดปกติเชิงตรรกะร้ายแรง 2 ประเด็น</div>
