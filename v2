@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>48 ชั่วโมงหลังปิดคูหา — ข้อมูลประกอบบทความ ECT Report 69</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans Thai',Arial,sans-serif;background:#f8f8f6;color:#1a1a1a;line-height:1.65}
+.page{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+/* Header */
+.report-header{background:#1a1a1a;color:#fff;padding:2rem 1.5rem;margin-bottom:2rem;border-radius:8px}
+.report-title{font-size:22px;font-weight:700;margin-bottom:.3rem}
+.report-sub{font-size:13px;color:#aaa;line-height:1.6}
+/* Section */
+.section{background:#fff;border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #e8e8e4}
+.section-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:.5rem}
+.badge-red{background:#FFECEC;color:#7B241C}
+.badge-orange{background:#FEF9E7;color:#7D6608}
+.badge-blue{background:#EBF5FB;color:#1A5276}
+.badge-gray{background:#f0f0f0;color:#555}
+.section-title{font-size:16px;font-weight:700;margin-bottom:.3rem}
+.section-desc{font-size:12px;color:#666;margin-bottom:1rem;line-height:1.65}
+/* Charts */
+.chart-wrap{position:relative;width:100%;height:420px}
+.chart-wrap-sm{position:relative;width:100%;height:260px}
+.chart-wrap-md{position:relative;width:100%;height:320px}
+.chart-wrap-xs{position:relative;width:100%;height:180px}
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:1rem 0}
+.stat{background:#f5f5f3;border-radius:8px;padding:.75rem 1rem;border-left:3px solid}
+.stat-label{font-size:11px;color:#666;margin-bottom:.15rem;line-height:1.4}
+.stat-val{font-size:20px;font-weight:700}
+.stat-sub{font-size:11px;color:#999;margin-top:.1rem}
+/* Gap boxes */
+.gap-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1rem 0}
+.gap-box{border-radius:8px;padding:.75rem 1rem;border-left:4px solid}
+.gb1{background:#FEF9E7;border-color:#E67E22}
+.gb1 .gt{color:#7D6608;font-size:13px;font-weight:700;margin-bottom:.2rem}
+.gb1 .gd{color:#9A7D0A;font-size:12px;line-height:1.6}
+.gb2{background:#FFECEC;border-color:#C0392B}
+.gb2 .gt{color:#7B241C;font-size:13px;font-weight:700;margin-bottom:.2rem}
+.gb2 .gd{color:#922B21;font-size:12px;line-height:1.6}
+/* Legend */
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#555;margin-bottom:.5rem;align-items:center}
+.legend span{display:flex;align-items:center;gap:5px}
+.ld{width:22px;height:3px;border-radius:2px;display:inline-block}
+.ldot{width:10px;height:10px;border-radius:50%;display:inline-block}
+/* Sub label */
+.sub-label{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#888;margin:.75rem 0 .35rem}
+/* Insight boxes */
+.insight{border-radius:8px;padding:.85rem 1rem;margin-top:.75rem;border-left:3px solid}
+.i-orange{background:#FEF9E7;border-color:#E67E22}
+.i-orange .it{color:#7D6608;font-size:13px;font-weight:700;margin-bottom:.2rem}
+.i-orange .id{color:#9A7D0A;font-size:12px;line-height:1.65}
+.i-red{background:#FFECEC;border-color:#C0392B}
+.i-red .it{color:#7B241C;font-size:13px;font-weight:700;margin-bottom:.2rem}
+.i-red .id{color:#922B21;font-size:12px;line-height:1.65}
+/* Table */
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:.5rem}
+thead th{text-align:left;padding:5px 8px;font-size:11px;font-weight:600;color:#888;border-bottom:1.5px solid #ddd;background:#fafafa;white-space:nowrap}
+tbody td{padding:5px 8px;border-bottom:.5px solid #f0f0f0;color:#444}
+tbody tr:nth-child(even){background:#fafafa}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+/* Pct bar */
+.pct-bar-wrap{display:flex;align-items:center;gap:6px}
+.pct-bar-bg{flex:1;height:7px;background:#eee;border-radius:2px;overflow:hidden;min-width:50px}
+.pct-bar-fill{height:100%;border-radius:2px}
+/* Tags */
+.tag{display:inline-block;font-size:10px;padding:1px 5px;border-radius:3px;font-weight:600}
+.tag-g1{background:#FEF9E7;color:#7D6608;border:1px solid #E67E22}
+.tag-g2{background:#FFECEC;color:#7B241C;border:1px solid #C0392B}
+.tag-flat{background:#f0f0f0;color:#888}
+.tag-jump{background:#fff3e0;color:#E65100;border:1px solid #E67E22}
+/* Dot grid */
+.dot-legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:.5rem;font-size:11px;color:#555}
+.dot-legend span{display:flex;align-items:center;gap:5px}
+/* Pill */
+.pill{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;font-weight:500}
+.p-ppp{background:#FEF3C7;color:#92400E}
+.p-bjt{background:#DBEAFE;color:#1E3A8A}
+.p-kt{background:#D1FAE5;color:#065F46}
+.p-pt{background:#FCE7F3;color:#9D174D}
+/* Grid cards */
+.miss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:8px;margin:.5rem 0}
+.miss-card{border-radius:7px;padding:.6rem .8rem;border-left:3px solid}
+/* 2-col */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.75rem}
+/* Turnout table */
+.to-table{max-height:340px;overflow-y:auto}
+/* Divider */
+hr{border:none;border-top:1px solid #e8e8e4;margin:1.5rem 0}
+
+/* ══ Responsive ══════════════════════════════════════════ */
+
+/* กัน canvas ล้นจอทุกขนาดหน้าจอ */
+canvas           { max-width: 100%; }
+.section         { overflow: hidden; }
+
+/* ── iPhone / มือถือทั่วไป (≤600px) ─── */
+@media (max-width: 600px) {
+  .page            { padding: 1rem 0.75rem; }
+  .report-header   { padding: 1.25rem 1rem; border-radius: 6px; }
+  .report-title    { font-size: 17px; }
+  .report-sub      { font-size: 11px; }
+  .section         { padding: 1rem 0.75rem; }
+  .section-title   { font-size: 14px; }
+  .stat-val        { font-size: 16px; }
+  .stat-label      { font-size: 10px; }
+  /* Stats row → 2 คอลัมน์ (ใช้ !important เพราะบางตัวมี inline style ทับ) */
+  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 8px; }
+  /* Gap boxes และ 2-col → เรียงแนวตั้ง */
+  .gap-row         { grid-template-columns: 1fr; }
+  .two-col         { grid-template-columns: 1fr !important; }
+  /* ลดความสูง chart */
+  .chart-wrap      { height: 240px; }
+  .chart-wrap-sm   { height: 200px; }
+  .chart-wrap-md   { height: 220px; }
+  .chart-wrap-xs   { height: 150px; }
+  .chart-wrap-lg   { height: 300px; }
+  /* chart inline style ทั้งหมดในหน้า */
+  div[style*="height:480px"] { height: 300px !important; }
+  div[style*="height:280px"] { height: 220px !important; }
+  div[style*="height:240px"] { height: 200px !important; }
+  div[style*="height:160px"] { height: 140px !important; }
+  div[style*="height:140px"] { height: 130px !important; }
+  /* ตาราง scroll ซ้าย-ขวา */
+  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .to-table        { max-height: 260px; }
+  /* miss-grid ย่อ card เล็กลง */
+  .miss-grid       { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+  /* legend ย่อ */
+  .legend          { font-size: 11px; gap: 10px; }
+  .section-desc    { font-size: 11px; }
+}
+
+/* ── iPad แนวตั้ง (601px – 768px) ─── */
+@media (min-width: 601px) and (max-width: 768px) {
+  .page            { padding: 1.5rem 1rem; }
+  /* Stats row → 2 คอลัมน์ */
+  .stats-row       { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  /* 2-col และ gap-row → เรียงแนวตั้ง เพื่อ chart ไม่แคบเกินไป */
+  .gap-row         { grid-template-columns: 1fr; }
+  .two-col         { grid-template-columns: 1fr !important; }
+  .chart-wrap      { height: 340px; }
+  .chart-wrap-sm   { height: 240px; }
+  .chart-wrap-md   { height: 280px; }
+  .chart-wrap-lg   { height: 420px; }
+  div[style*="height:480px"] { height: 420px !important; }
+  div[style*="height:280px"] { height: 260px !important; }
+  table            { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* ── iPad แนวนอน (769px – 1024px) ─── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page            { padding: 1.5rem 1.25rem; }
+  .stats-row       { grid-template-columns: repeat(4, 1fr); }
+  .two-col         { grid-template-columns: 1fr 1fr; }
+  .chart-wrap      { height: 380px; }
+  .chart-wrap-sm   { height: 240px; }
+  .chart-wrap-md   { height: 300px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="report-header">
+  <div class="report-title">24 ชั่วโมงหลังปิดคูหา — ข้อมูลสถิติการรายงานคะแนน ECT Report 69</div>
+  <div class="report-sub">
+    การเลือกตั้ง 8 กุมภาพันธ์ 2569 · วิเคราะห์จาก 47 snapshot ของระบบ ECT Report 69<br>
+    ครอบคลุม 3 ช่วง: ก่อน GAP 1 · ช่วง GAP 1–2 · หลัง GAP 2
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ภาพรวม: Turnout Timeline
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-gray">ภาพรวม</span>
+  <div class="section-title">จำนวนผู้ใช้สิทธิ์สะสม — Turnout Timeline</div>
+  <div class="section-desc">
+    เส้น <b>ระนาบ (flatline)</b> แสดงเฉพาะช่วง GAP 1 และ GAP 2 — ส่วนที่เหลือใช้ linear interpolation<br>
+    คะแนนชุดแรก 559 คะแนนปรากฏตั้งแต่ 16:48 น. (ก่อนปิดคูหา 12 นาที) จาก ปัตตานี เขต 3
+  </div>
+  <div class="stats-row">
+    <div class="stat" style="border-color:#2E8B57">
+      <div class="stat-label">คะแนนชุดแรก (16:48 น.)</div>
+      <div class="stat-val" style="color:#2E8B57">559</div>
+      <div class="stat-sub">ปัตตานี เขต 3 ก่อนปิดคูหา</div>
+    </div>
+    <div class="stat" style="border-color:#333">
+      <div class="stat-label">คะแนนสุดท้าย (15:51 +1)</div>
+      <div class="stat-val">34.53M</div>
+      <div class="stat-sub">65.2% ของผู้มีสิทธิ์</div>
+    </div>
+    <div class="stat" style="border-color:#E67E22">
+      <div class="stat-label">คะแนน ณ 19:43 (ก่อน GAP 1)</div>
+      <div class="stat-val" style="color:#E67E22">6.86%</div>
+      <div class="stat-sub">2.37M จาก 34.53M ทั้งหมด</div>
+    </div>
+    <div class="stat" style="border-color:#C0392B">
+      <div class="stat-label">ผลต่างบัตรเขต–ลิสต์ (final)</div>
+      <div class="stat-val" style="color:#C0392B">37,883</div>
+      <div class="stat-sub">ยังต่างกันอยู่จนสิ้นสุดการรายงาน</div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><span class="ld" style="background:#2E8B57"></span>ผู้ใช้สิทธิ์ ส.ส.เขต</span>
+    <span><span class="ld" style="background:#E91E8C"></span>ผู้ใช้สิทธิ์ ส.ส.บัญชีรายชื่อ</span>
+    <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:0;border-top:2px dashed #E67E22"></span>GAP 1 (55 นาที)</span>
+    <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:0;border-top:2px dashed #C0392B"></span>GAP 2 (106 นาที)</span>
+  </div>
+  <div class="chart-wrap"><canvas id="cTurnout"></canvas></div>
+  <div class="gap-row" style="margin-top:1rem">
+    <div class="gap-box gb1">
+      <div class="gt">GAP 1 — 19:43 ถึง 20:38 (หยุด 55 นาที)</div>
+      <div class="gd">เขต: 2.37M → 8.02M | <b>กระโดด +5.65M (+16.36%)</b><br>ลิสต์: 1.81M → 7.12M | <b>กระโดด +5.31M</b></div>
+    </div>
+    <div class="gap-box gb2">
+      <div class="gt">GAP 2 — 20:49 ถึง 22:35 (หยุด 106 นาที)</div>
+      <div class="gd">เขต: 9.79M → 26.84M | <b>กระโดด +17.05M (+49.39%)</b><br>ลิสต์: 8.88M → 26.45M | <b>กระโดด +17.57M</b></div>
+    </div>
+  </div>
+  <div class="sub-label">ตาราง % คะแนนสะสมแต่ละ snapshot</div>
+  <div class="to-table">
+  <table id="turnoutTable">
+    <thead><tr>
+      <th>เวลา</th><th class="num">คะแนนสะสม (เขต)</th><th class="num">% สะสม</th>
+      <th style="min-width:110px">สัดส่วน</th><th class="num">+เพิ่ม</th><th class="num">+%</th><th>หมายเหตุ</th>
+    </tr></thead>
+    <tbody id="turnoutBody"></tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ช่วงก่อน GAP 1
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-orange">ช่วงก่อน GAP 1</span>
+  <div class="section-title">สัดส่วนคะแนน ณ 19:43 น. — เบี้ยวในทิศตรงข้าม</div>
+  <div class="section-desc">
+    ในการรายงานแบบสุ่ม สัดส่วนคะแนนแต่ละพรรคควรใกล้เคียง final share ตลอดเวลา แต่พบว่า ณ 19:43 น.
+    ภูมิใจไทยสูงกว่า final ถึง +5.6% และประชาชนต่ำกว่า final ถึง −6.4% ขณะที่พรรคอื่นใกล้เคียง final
+  </div>
+
+  <div class="sub-label">กราฟ 2 — % เขตที่ชนะ final ที่รายงานแล้ว ณ 19:43</div>
+  <div class="chart-wrap-sm"><canvas id="cDivBar"></canvas></div>
+
+  <div class="two-col" style="margin-top:1rem">
+    <div>
+      <div class="sub-label">กราฟ 3 — % เขตที่ชนะ final ที่มีคะแนนรายงาน ณ 19:43</div>
+      <div class="chart-wrap-sm"><canvas id="cReported"></canvas></div>
+    </div>
+    <div>
+      <div class="sub-label">กราฟ 4 — 85 เขต PPP แยกสถานะ ณ 19:43</div>
+      <div class="dot-legend">
+        <span><span class="ldot" style="background:#E07B00"></span>นำอยู่ (47)</span>
+        <span><span class="ldot" style="background:#F0C080"></span>มีคะแนนแต่ตามหลัง (17)</span>
+        <span><span class="ldot" style="background:#ccc;border:1px dashed #aaa"></span>ไม่มีคะแนนเลย (21)</span>
+      </div>
+      <div id="dotGrid" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.5rem"></div>
+      <div style="font-size:11px;color:#888">21 เขตไม่มีคะแนน: กทม. 13 เขต · สมุทรปราการ 2 · นนทบุรี 2 · ปทุมธานี 1 · ชลบุรี 1 · สมุทรสาคร 1 · ภูเก็ต 1</div>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:1rem">21 เขตที่ PPP ไม่มีคะแนนเลย ณ 19:43 น.</div>
+  <div class="miss-grid" id="miss21"></div>
+
+  <div class="insight i-orange" style="margin-top:.75rem">
+    <div class="it">สรุปช่วงก่อน GAP 1</div>
+    <div class="id">
+      ภูมิใจไทยรายงานครบ 175/175 เขต (100%) ขณะที่ประชาชนมีคะแนนเพียง 64/85 เขต (75.3%)
+      โดย 21 เขตที่ขาดล้วนเป็นเขตเมืองใหญ่ฐานเสียงหลักของประชาชน คะแนนรวม 785,913 คะแนน
+      ที่ยังไม่ปรากฏในระบบ ณ เวลานั้น ทำให้สัดส่วนที่ประชาชนเห็นในช่วงแรก "ต่ำกว่าความเป็นจริง"
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ช่วงก่อน GAP 2: ไทม์ไลน์เขต
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-orange">ช่วงก่อน GAP 2</span>
+  <div class="section-title">ไทม์ไลน์จำนวนเขตที่แต่ละพรรคนำ</div>
+  <div class="section-desc">
+    หลัง GAP 1 กลับมา ภูมิใจไทยกระโดดจาก 171 → 179 เขตในก้าวเดียว ซึ่งเป็นครั้งแรกที่แตะ 175 เขต
+    ประชาชนยังอยู่ที่ 70–71 เขต ก่อนที่ GAP 2 จะเริ่ม
+  </div>
+  <div class="legend">
+    <span><span class="ld" style="background:#185FA5"></span>ภูมิใจไทย — เขตที่นำ</span>
+    <span><span class="ld" style="background:#E07B00"></span>ประชาชน — เขตที่นำ</span>
+    <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:20px;height:0;border-top:1.5px dashed #888"></span>final (175 / 85)</span>
+  </div>
+  <div class="chart-wrap-md"><canvas id="cLeadTimeline"></canvas></div>
+
+  <div class="sub-label" style="margin-top:1rem">กราฟ 1 — สัดส่วนคะแนนแต่ละพรรค ณ ทุก snapshot (ผลต่างจาก final share)</div>
+  <div class="section-desc" style="margin-bottom:.5rem">
+    ค่าบวก = สัดส่วน ณ ช่วงนั้นสูงกว่า final · ค่าลบ = ต่ำกว่า final · เส้นประ = เส้นศูนย์
+  </div>
+  <div style="position:relative;width:100%;height:280px"><canvas id="cPartyShareDiff"></canvas></div>
+
+  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1rem">
+    <div class="stat" style="border-color:#185FA5">
+      <div class="stat-label">BJT ณ 19:43</div><div class="stat-val" style="color:#185FA5">171 เขต</div>
+      <div class="stat-sub">ครบ 175/175 เขตที่จะชนะ final</div>
+    </div>
+    <div class="stat" style="border-color:#185FA5">
+      <div class="stat-label">BJT ณ 20:38 (หลัง GAP 1)</div><div class="stat-val" style="color:#185FA5">179 เขต</div>
+      <div class="stat-sub">สูงสุดตลอดคืน — เกิน final ชั่วคราว</div>
+    </div>
+    <div class="stat" style="border-color:#E07B00">
+      <div class="stat-label">PPP ณ 19:43</div><div class="stat-val" style="color:#E07B00">50 เขต</div>
+      <div class="stat-sub">58.8% ของ 85 เขตที่จะชนะ final</div>
+    </div>
+    <div class="stat" style="border-color:#E07B00">
+      <div class="stat-label">PPP ครบ 85 เขต</div><div class="stat-val" style="color:#E07B00">00:17+</div>
+      <div class="stat-sub">ช้ากว่า BJT ครบ 175 เขต 4.5 ชั่วโมง</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ความผิดปกติ: บัตรเขต vs ลิสต์ + valid>turnout
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-red">ความผิดปกติ</span>
+  <div class="section-title">ก — ผลต่างบัตรเขต vs บัตรปาร์ตี้ลิสต์ ตลอดการรายงาน</div>
+  <div class="section-desc">
+    ผู้มีสิทธิทุกคนได้รับบัตร 2 ใบพร้อมกัน จำนวนบัตรเขตและบัตรลิสต์จึงต้องเท่ากันเสมอ
+    แต่พบผลต่างสูงสุด 906,825 ใบ และยังคงต่างกัน 37,883 ใบ ณ snapshot สุดท้าย
+  </div>
+  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:.75rem">
+    <div class="stat" style="border-color:#C0392B">
+      <div class="stat-label">ผลต่างสูงสุด ณ 20:49</div>
+      <div class="stat-val" style="color:#C0392B">906,825</div>
+      <div class="stat-sub">ต่างกันเกือบ 1 ล้านบัตร</div>
+    </div>
+    <div class="stat" style="border-color:#E67E22">
+      <div class="stat-label">ผลต่าง final (15:51+)</div>
+      <div class="stat-val" style="color:#E67E22">37,883</div>
+      <div class="stat-sub">ยังต่างกันจนสิ้นสุดการรายงาน</div>
+    </div>
+    <div class="stat" style="border-color:#888">
+      <div class="stat-label">เขตที่มีส่วนต่าง (final)</div>
+      <div class="stat-val">391 / 400</div>
+      <div class="stat-sub">เท่ากันพอดีเพียง 9 เขต</div>
+    </div>
+    <div class="stat" style="border-color:#8E44AD">
+      <div class="stat-label">valid_votes &gt; turn_out</div>
+      <div class="stat-val" style="color:#8E44AD">49 เขต</div>
+      <div class="stat-sub">30 จังหวัด · ช่วง 22:35–22:45</div>
+    </div>
+  </div>
+
+  <div class="sub-label">ก.1 — ส่วนต่างบัตรเขต vs บัตรลิสต์ ตลอดการรายงาน (timeline)</div>
+  <div style="height:240px;position:relative"><canvas id="chart3a"></canvas></div>
+
+  <div class="two-col" style="margin-top:1rem">
+    <div>
+      <div class="sub-label">ก.2 — จังหวัดที่มีส่วนต่างรวมสูงสุด top 20</div>
+      <div style="font-size:11px;color:#888;margin-bottom:.35rem">สีน้ำเงิน = บัตรเขต > บัตรลิสต์ · สีแดง = บัตรลิสต์ > บัตรเขต</div>
+      <div style="height:480px;position:relative"><canvas id="cProvDiffFull"></canvas></div>
+    </div>
+    <div>
+      <div class="sub-label">ก.3 — เขตที่มีส่วนต่างมากสุด (top 20)</div>
+      <div style="overflow-x:auto;max-height:520px;overflow-y:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr>
+          <th style="text-align:left;padding:5px 8px;font-size:11px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa;white-space:nowrap">จังหวัด</th>
+          <th style="text-align:center;padding:5px 8px;font-size:11px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">เขต</th>
+          <th style="text-align:right;padding:5px 8px;font-size:11px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">ต่าง (ใบ)</th>
+          <th style="text-align:left;padding:5px 8px;font-size:11px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">พรรคที่ชนะ</th>
+        </tr></thead>
+        <tbody id="bigDiffBody"></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin:1.25rem 0;border:none;border-top:1px solid #eee">
+  <div class="section-title" style="margin-top:.25rem">ข — valid_votes &gt; turn_out ช่วง 22:35–22:49 น.</div>
+  <div class="section-desc" style="margin-bottom:.75rem">
+    valid_votes มากกว่า turn_out เป็นไปไม่ได้ทางคณิตศาสตร์ — ปรากฏ 3 snapshot แล้วหายไปเองที่ 22:49 ไม่มีคำอธิบาย
+  </div>
+  <div class="stats-row" style="grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:.75rem">
+    <div class="stat" style="border-color:#E67E22">
+      <div class="stat-label">ณ 22:35</div>
+      <div class="stat-val" style="color:#E67E22">47 เขต</div>
+      <div class="stat-sub">excess รวม 86,648</div>
+    </div>
+    <div class="stat" style="border-color:#C0392B">
+      <div class="stat-label">ณ 22:39 (สูงสุด)</div>
+      <div class="stat-val" style="color:#C0392B">49 เขต</div>
+      <div class="stat-sub">excess รวม 89,398</div>
+    </div>
+    <div class="stat" style="border-color:#E67E22">
+      <div class="stat-label">ณ 22:45</div>
+      <div class="stat-val" style="color:#E67E22">46 เขต</div>
+      <div class="stat-sub">excess รวม 86,453</div>
+    </div>
+    <div class="stat" style="border-color:#2E8B57">
+      <div class="stat-label">ณ 22:49 (หายไป)</div>
+      <div class="stat-val" style="color:#2E8B57">0 เขต</div>
+      <div class="stat-sub">ไม่มีคำอธิบายจาก กกต.</div>
+    </div>
+  </div>
+
+  <div style="height:140px;position:relative;margin-bottom:.75rem"><canvas id="chart3b"></canvas></div>
+
+  <div class="two-col" style="margin-top:.5rem">
+    <div>
+      <div class="sub-label">ข.1 — excess แยกตามจังหวัด ณ 22:39</div>
+      <div style="height:480px;position:relative"><canvas id="cVgtProvFull"></canvas></div>
+    </div>
+    <div>
+      <div class="sub-label">ข.2 — 49 เขตที่ valid &gt; turnout ณ 22:39</div>
+      <div style="overflow-x:auto;max-height:520px;overflow-y:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:11.5px">
+        <thead><tr>
+          <th style="text-align:left;padding:5px 6px;font-size:10px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa;white-space:nowrap">จังหวัด</th>
+          <th style="text-align:center;padding:5px 6px;font-size:10px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">เขต</th>
+          <th style="text-align:right;padding:5px 6px;font-size:10px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">excess</th>
+          <th style="text-align:left;padding:5px 6px;font-size:10px;font-weight:600;color:#888;border-bottom:1.5px solid #e0e0e0;background:#fafafa">พรรค</th>
+        </tr></thead>
+        <tbody id="vgtConsBody"></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:1rem">ข.3 — ผู้ชนะในเขต valid &gt; turnout แยกตามพรรค ณ 22:39</div>
+  <div style="height:160px;position:relative"><canvas id="cVgtPartyFull"></canvas></div>
+
+  <div class="insight i-red" style="margin-top:.75rem">
+    <div class="it">ผลการวิเคราะห์: พบความผิดปกติเชิงตรรกะร้ายแรง 2 ประเด็น</div>
+    <div class="id">
+      (1) <b>บัตรต่างกันถาวร:</b> บัตรเขตมากกว่าบัตรลิสต์ตลอดเวลา ผลต่างสูงสุด 906,825 บัตร และยังคงต่าง 37,883 บัตรจนถึงตอนท้าย<br>
+      (2) <b>คะแนนถูกต้องมากกว่าผู้ใช้สิทธิ์:</b> ช่วง 22:35–22:45 มี 30 จังหวัด 49 เขตที่ valid_votes &gt; turn_out รวมผลต่างกว่า 86,000–89,000 คะแนน แล้วหายไปเองใน 22:49
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     03 — Vote Decreases
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-red">ช่วงหลัง GAP 2</span>
+  <div class="section-title">03 — การปรับลดคะแนนรายบุคคล ตั้งแต่ 22:35 น. เป็นต้นไป</div>
+  <div class="section-desc">
+    พบการลดคะแนนผู้สมัครรายบุคคล 2,157 กรณี ใน 1,384 ผู้สมัคร 179 เขต 62 จังหวัด รวม −118,635 คะแนน
+    ไม่มีกรณีใดที่การลดคะแนนทำให้ผู้ชนะในเขตนั้นเปลี่ยนแปลง
+  </div>
+  <div class="chart-wrap-sm"><canvas id="cDecrease"></canvas></div>
+
+  <div class="sub-label" style="margin-top:1rem">04 — คะแนนที่ลดลง แยกตามพรรค</div>
+  <div class="chart-wrap-sm"><canvas id="cPartyDec"></canvas></div>
+
+  <div class="sub-label" style="margin-top:1rem">ผู้สมัคร 20 รายที่ถูกปรับลดคะแนนมากสุด</div>
+  <table>
+    <thead><tr><th>จังหวัด</th><th class="num">เขต</th><th>พรรค</th><th>ผู้สมัคร</th><th class="num">ลดลงรวม</th></tr></thead>
+    <tbody id="topDecTable"></tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════
+     24 เขตพลิกผลหลัง GAP 2
+════════════════════════════════════════════ -->
+<div class="section">
+  <span class="section-badge badge-red">ช่วงหลัง GAP 2</span>
+  <div class="section-title">24 เขตที่ผู้นำเปลี่ยนมือหลัง GAP 2</div>
+  <div class="section-desc">
+    17 เขน (70.8%) พลิกทันทีที่ 22:35 น. snapshot แรกหลัง GAP 2 กลับมา — ส่วนใหญ่ PPP พลิกจาก BJT และเพื่อไทย
+    อีก 7 เขตทยอยพลิกระหว่าง 23:01 ถึง 00:33 น. วันถัดไป
+  </div>
+  <div class="legend">
+    <span><span class="ldot" style="background:#E07B00"></span>ประชาชนได้</span>
+    <span><span class="ldot" style="background:#185FA5"></span>ภูมิใจไทยได้</span>
+    <span><span class="ldot" style="background:#3B6D11"></span>กล้าธรรมได้</span>
+    <span><span class="ldot" style="background:#E24B4A"></span>เพื่อไทยได้</span>
+  </div>
+  <div class="chart-wrap-xs"><canvas id="cFlip"></canvas></div>
+  <div style="overflow-x:auto;margin-top:.75rem">
+  <table>
+    <thead><tr><th>เวลาพลิก</th><th>จังหวัด</th><th class="num">เขต</th><th>ผู้นำก่อน GAP 2</th><th>ผู้ชนะ final</th></tr></thead>
+    <tbody id="flipTable"></tbody>
+  </table>
+  </div>
+</div>
+
+
+</div><!-- end .page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// ═══════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════
+var FINAL_TO = 34527431;
+// ms = Unix timestamp (UTC+7 → subtract 7h = 25200000ms)
+// วันที่ 8 ก.พ. 2569 เวลา H:MM น. → Date.UTC(2026,1,8,H-7,MM)
+// วันที่ 9 ก.พ. (เวลา +) → Date.UTC(2026,1,9,H-7,MM)
+function ts(h,m,nextDay){return Date.UTC(2026,1,nextDay?9:8,h-7,m);}
+var snaps = [
+  {t:'16:48',ms:ts(16,48),v:559,p:0},{t:'16:58',ms:ts(16,58),v:559,p:0},
+  {t:'17:08',ms:ts(17,8),v:559,p:0},{t:'17:18',ms:ts(17,18),v:559,p:0},
+  {t:'17:28',ms:ts(17,28),v:559,p:0},{t:'17:38',ms:ts(17,38),v:771,p:0},
+  {t:'17:48',ms:ts(17,48),v:2477,p:0},{t:'17:58',ms:ts(17,58),v:7202,p:107},
+  {t:'18:08',ms:ts(18,8),v:23940,p:2704},{t:'18:18',ms:ts(18,18),v:60706,p:9473},
+  {t:'18:28',ms:ts(18,28),v:127518,p:28246},{t:'18:38',ms:ts(18,38),v:234684,p:73197},
+  {t:'18:48',ms:ts(18,48),v:386813,p:158338},{t:'18:58',ms:ts(18,58),v:583528,p:300442},
+  {t:'19:08',ms:ts(19,8),v:846558,p:501969},{t:'19:18',ms:ts(19,18),v:1190289,p:788083},
+  {t:'19:28',ms:ts(19,28),v:1607272,p:1139184},{t:'19:38',ms:ts(19,38),v:2094628,p:1578130},
+  {t:'19:43',ms:ts(19,43),v:2367193,p:1813220},
+  {t:'20:38',ms:ts(20,38),v:8016176,p:7123672},{t:'20:49',ms:ts(20,49),v:9789994,p:8883169},
+  {t:'22:35',ms:ts(22,35),v:26843450,p:26447119},{t:'22:39',ms:ts(22,39),v:27213312,p:26842766},
+  {t:'22:45',ms:ts(22,45),v:27764570,p:27435760},{t:'22:49',ms:ts(22,49),v:28819656,p:28479758},
+  {t:'22:51',ms:ts(22,51),v:28995316,p:28661715},{t:'23:01',ms:ts(23,1),v:29805280,p:29508425},
+  {t:'23:07',ms:ts(23,7),v:30228274,p:29992977},{t:'23:13',ms:ts(23,13),v:30632155,p:30383128},
+  {t:'23:27',ms:ts(23,27),v:31371202,p:31178573},{t:'23:43',ms:ts(23,43),v:32001816,p:31867545},
+  {t:'23:59',ms:ts(23,59),v:32465124,p:32344636},{t:'00:17+',ms:ts(0,17,true),v:32876585,p:32761489},
+  {t:'00:41+',ms:ts(0,41,true),v:33331360,p:33244650},{t:'01:15+',ms:ts(1,15,true),v:33838568,p:33768802},
+  {t:'01:59+',ms:ts(1,59,true),v:34162999,p:34120655},{t:'02:59+',ms:ts(2,59,true),v:34318732,p:34281188},
+  {t:'03:59+',ms:ts(3,59,true),v:34389998,p:34349300},{t:'08:53+',ms:ts(8,53,true),v:34434497,p:34394820},
+  {t:'15:51+',ms:ts(15,51,true),v:34527431,p:34489548}
+];
+
+var leadSnaps = [
+  {t:'16:48',bjt:0,ppp:0},{t:'17:38',bjt:2,ppp:0},{t:'17:48',bjt:9,ppp:0},
+  {t:'17:58',bjt:16,ppp:1},{t:'18:08',bjt:31,ppp:4},{t:'18:18',bjt:52,ppp:7},
+  {t:'18:28',bjt:77,ppp:10},{t:'18:38',bjt:97,ppp:18},{t:'18:48',bjt:131,ppp:24},
+  {t:'18:58',bjt:153,ppp:26},{t:'19:08',bjt:164,ppp:34},{t:'19:18',bjt:165,ppp:40},
+  {t:'19:28',bjt:168,ppp:43},{t:'19:38',bjt:169,ppp:49},{t:'19:43',bjt:171,ppp:50},
+  {t:'20:38',bjt:179,ppp:71},{t:'20:49',bjt:178,ppp:70},{t:'22:35',bjt:177,ppp:79},
+  {t:'22:49',bjt:177,ppp:80},{t:'23:01',bjt:178,ppp:80},{t:'23:13',bjt:178,ppp:82},
+  {t:'23:43',bjt:176,ppp:84},{t:'00:17+',bjt:175,ppp:85},{t:'15:51+',bjt:175,ppp:85}
+];
+
+var decEvents = [
+  {t:'22:35→22:39',dec:-2300,n:79},{t:'22:39→22:45',dec:-2590,n:83},
+  {t:'22:45→22:49',dec:-8678,n:67},{t:'22:49→22:51',dec:-2123,n:77},
+  {t:'22:51→23:01',dec:-12503,n:158},{t:'23:01→23:07',dec:-11173,n:183},
+  {t:'23:07→23:13',dec:-4260,n:136},{t:'23:13→23:15',dec:-1617,n:64},
+  {t:'23:15→23:17',dec:-1597,n:45},{t:'23:17→23:21',dec:-5543,n:95},
+  {t:'23:21→23:23',dec:-1258,n:51},{t:'23:23→23:27',dec:-3704,n:124},
+  {t:'23:27→23:31',dec:-1655,n:59},{t:'23:31→23:43',dec:-22644,n:208},
+  {t:'23:43→23:59',dec:-12164,n:218},{t:'23:59→00:17',dec:-12014,n:168},
+  {t:'00:17→00:33',dec:-2615,n:82},{t:'00:33→00:41',dec:-2347,n:54},
+  {t:'00:41→01:01',dec:-2350,n:82},{t:'01:01→01:15',dec:-2118,n:41},
+  {t:'01:15→01:59',dec:-2124,n:55},{t:'01:59→02:59',dec:-893,n:14},
+  {t:'02:59→03:59',dec:-256,n:10},{t:'03:59→08:53',dec:-109,n:4}
+];
+
+var partyDec = [
+  {p:'ประชาชน',total:-49291,pct:-0.629},{p:'ภูมิใจไทย',total:-21344,pct:-0.214},
+  {p:'กล้าธรรม',total:-16707,pct:-0.435},{p:'เพื่อไทย',total:-15852,pct:-0.275},
+  {p:'ประชาธิปัตย์',total:-6598,pct:-0.328},{p:'รวมไทยฯ',total:-3977,pct:-0.306},
+  {p:'เศรษฐกิจ',total:-3651,pct:-0.349},{p:'ประชาชาติ',total:-3190,pct:-0.402}
+];
+
+var topCands = [
+  {prov:'พะเยา',cons:3,party:'ประชาชน',name:'นายรุ่งวิกรัย ครุฑธิยัง',dec:-4869},
+  {prov:'พะเยา',cons:1,party:'ประชาชน',name:'นายวิสา บุญนัดดา',dec:-4819},
+  {prov:'เชียงใหม่',cons:3,party:'ประชาชน',name:'นายณัฐพล โตวิจักษณ์ชัยกุล',dec:-3662},
+  {prov:'เชียงใหม่',cons:6,party:'ประชาชน',name:'ว่าที่ ร.ต.หญิงอรพรรณ จันตาเรือง',dec:-3578},
+  {prov:'ร้อยเอ็ด',cons:5,party:'ประชาชน',name:'นายสนิท กล้าหาญ',dec:-3547},
+  {prov:'กรุงเทพฯ',cons:14,party:'ประชาชน',name:'นายก่อเกียรติ ก่อสูงศักดิ์',dec:-2844},
+  {prov:'กรุงเทพฯ',cons:19,party:'ประชาชน',name:'นายกันต์พงษ์ ประยูรศักดิ์',dec:-2353},
+  {prov:'ร้อยเอ็ด',cons:5,party:'เพื่อไทย',name:'นางสาวจิราพร สินธุไพร',dec:-2310},
+  {prov:'ประจวบคีรีขันธ์',cons:1,party:'ประชาชน',name:'นายมรกต โอ่เอี่ยม',dec:-2301},
+  {prov:'อุดรธานี',cons:5,party:'ประชาชน',name:'นายชัยฤทธิ์ เขาวงศ์ทอง',dec:-2268},
+  {prov:'ปัตตานี',cons:1,party:'ประชาชน',name:'นายไวชิต อุดมวนิช',dec:-2264},
+  {prov:'พะเยา',cons:3,party:'กล้าธรรม',name:'นายจีรเดช ศรีวิราช',dec:-1997},
+  {prov:'ประจวบคีรีขันธ์',cons:1,party:'ภูมิใจไทย',name:'นายสังคม แดงโชติ',dec:-1270},
+  {prov:'นครปฐม',cons:4,party:'ประชาชน',name:'นายกิตติภณ ปานพรหมมาศ',dec:-1189},
+  {prov:'กรุงเทพฯ',cons:14,party:'ภูมิใจไทย',name:'นางสาวฐิติภัสร์ โชติเดชาชัยนันต์',dec:-1125},
+  {prov:'พะเยา',cons:1,party:'กล้าธรรม',name:'นายอัครา พรหมเผ่า',dec:-1077},
+  {prov:'นนทบุรี',cons:5,party:'ประชาชน',name:'นายปรีติ เจริญศิลป์',dec:-1015},
+  {prov:'ร้อยเอ็ด',cons:5,party:'ภูมิใจไทย',name:'นายชัยวุฒิ เอี่ยมรัศมีกุล',dec:-832},
+  {prov:'น่าน',cons:2,party:'กล้าธรรม',name:'นายประสิทธิ์ โนทะ',dec:-827},
+  {prov:'พะเยา',cons:3,party:'เพื่อไทย',name:'นายอำนาจ วิชัย',dec:-803}
+];
+
+var ballotDiff = [
+  {t:'16:48',d:0},{t:'17:38',d:559},{t:'17:48',d:2477},{t:'17:58',d:7095},
+  {t:'18:08',d:21236},{t:'18:18',d:51233},{t:'18:28',d:99272},{t:'18:38',d:161487},
+  {t:'18:48',d:228475},{t:'18:58',d:283086},{t:'19:08',d:344589},{t:'19:18',d:402206},
+  {t:'19:28',d:468088},{t:'19:38',d:516498},{t:'19:43',d:553973},
+  {t:'20:38',d:892504},{t:'20:49',d:906825},{t:'22:35',d:396331},
+  {t:'22:39',d:370546},{t:'22:45',d:328810},{t:'22:49',d:339898},
+  {t:'22:51',d:333601},{t:'23:01',d:296855},{t:'23:07',d:235297},
+  {t:'23:13',d:249027},{t:'23:27',d:192629},{t:'23:43',d:134271},
+  {t:'23:59',d:120488},{t:'00:17+',d:115096},{t:'00:41+',d:86710},
+  {t:'01:15+',d:69766},{t:'01:59+',d:42344},{t:'03:59+',d:40698},
+  {t:'08:53+',d:39677},{t:'15:51+',d:37883}
+];
+
+var vgtData = [
+  {t:'22:35',cons:47,excess:86648},{t:'22:39',cons:49,excess:89398},
+  {t:'22:45',cons:46,excess:86453},{t:'22:49',cons:0,excess:0}
+];
+
+var flipData = [
+  {t:'22:35',จ:'นนทบุรี',เ:4,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'ภูเก็ต',เ:1,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'สมุทรสาคร',เ:3,from:'กล้าธรรม',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'สมุทรสาคร',เ:1,from:'ประชาธิปัตย์',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'ราชบุรี',เ:5,from:'กล้าธรรม',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'22:35',จ:'เพชรบูรณ์',เ:2,from:'กล้าธรรม',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'22:35',จ:'เชียงใหม่',เ:5,from:'เพื่อไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'นครพนม',เ:3,from:'เพื่อไทย',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'22:35',จ:'ร้อยเอ็ด',เ:4,from:'กล้าธรรม',to:'เพื่อไทย',col:'#E24B4A'},
+  {t:'22:35',จ:'สงขลา',เ:8,from:'ภูมิใจไทย',to:'กล้าธรรม',col:'#3B6D11'},
+  {t:'22:35',จ:'ขอนแก่น',เ:2,from:'กล้าธรรม',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'นครราชสีมา',เ:16,from:'เพื่อไทย',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'22:35',จ:'ชลบุรี',เ:7,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'ชลบุรี',เ:6,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'ปทุมธานี',เ:1,from:'เพื่อไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'นนทบุรี',เ:5,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'22:35',จ:'ศรีสะเกษ',เ:6,from:'เพื่อไทย',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'23:01',จ:'นราธิวาส',เ:3,from:'กล้าธรรม',to:'ภูมิใจไทย',col:'#185FA5'},
+  {t:'23:13',จ:'นครราชสีมา',เ:14,from:'เพื่อไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'23:13',จ:'นครราชสีมา',เ:3,from:'เพื่อไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'23:17',จ:'นครปฐม',เ:6,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'23:43',จ:'นนทบุรี',เ:8,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'00:17+',จ:'ชลบุรี',เ:2,from:'ภูมิใจไทย',to:'ประชาชน',col:'#E07B00'},
+  {t:'00:33+',จ:'เชียงใหม่',เ:10,from:'เพื่อไทย',to:'กล้าธรรม',col:'#3B6D11'}
+];
+
+var missing21 = [
+  {prov:'กรุงเทพมหานคร',cons:8,votes:39081},{prov:'กรุงเทพมหานคร',cons:10,votes:37489},
+  {prov:'กรุงเทพมหานคร',cons:11,votes:36844},{prov:'กรุงเทพมหานคร',cons:15,votes:35586},
+  {prov:'กรุงเทพมหานคร',cons:16,votes:41727},{prov:'กรุงเทพมหานคร',cons:19,votes:38566},
+  {prov:'กรุงเทพมหานคร',cons:20,votes:31037},{prov:'กรุงเทพมหานคร',cons:21,votes:41256},
+  {prov:'กรุงเทพมหานคร',cons:25,votes:33581},{prov:'กรุงเทพมหานคร',cons:28,votes:37355},
+  {prov:'กรุงเทพมหานคร',cons:29,votes:42268},{prov:'กรุงเทพมหานคร',cons:30,votes:44737},
+  {prov:'กรุงเทพมหานคร',cons:33,votes:31456},
+  {prov:'สมุทรปราการ',cons:4,votes:43764},{prov:'สมุทรปราการ',cons:5,votes:50599},
+  {prov:'นนทบุรี',cons:1,votes:38190},{prov:'นนทบุรี',cons:2,votes:35675},
+  {prov:'ปทุมธานี',cons:4,votes:36892},{prov:'ชลบุรี',cons:7,votes:37862},
+  {prov:'สมุทรสาคร',cons:3,votes:28126},{prov:'ภูเก็ต',cons:2,votes:21359}
+];
+
+// ═══════════════════════════════════════════════════
+// GAP PLUGIN
+// ═══════════════════════════════════════════════════
+function makeGapPlugin(i0,i1,i2,i3){
+  return {
+    id:'gp',
+    beforeDraw:function(chart){
+      var ctx=chart.ctx,x=chart.scales.x,t=chart.chartArea.top,b=chart.chartArea.bottom;
+      function sh(a,c,col){
+        var x0=x.getPixelForValue(a),x1=x.getPixelForValue(c);
+        ctx.save();ctx.fillStyle=col+'22';ctx.fillRect(x0,t,x1-x0,b-t);
+        ctx.strokeStyle=col;ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
+        ctx.beginPath();ctx.moveTo(x0,t);ctx.lineTo(x0,b);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(x1,t);ctx.lineTo(x1,b);ctx.stroke();
+        ctx.setLineDash([]);ctx.restore();
+      }
+      sh(i0,i1,'#E67E22');sh(i2,i3,'#C0392B');
+    }
+  };
+}
+
+// ═══════════════════════════════════════════════════
+// TURNOUT CHART — linear scale (x = minutes from 16:48)
+// ═══════════════════════════════════════════════════
+(function(){
+  // แสดงเฉพาะจุดถึง 03:59 เพื่อไม่ให้ช่วงก่อน GAP1 แคบเกินไป
+  // (จุด 08:53+ และ 15:51+ ยังอยู่ในตาราง)
+  var DISPLAY_MAX = 37; // index สุดท้ายที่แสดงบนกราฟ (03:59+)
+  var G1_PRE=18, G1_POST=19, G2_PRE=20, G2_POST=21;
+  var M=function(v){return parseFloat((v/1e6).toFixed(4));};
+
+  // x = minutes จาก 16:48 (ตรงกับ ms ที่คำนวณไว้แล้ว แต่ใช้นาทีแทน)
+  var MIN=[0,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,175,
+           230,241,347,351,357,361,363,373,379,385,399,415,431,449,473,507,551,611,671];
+  // label แต่ละจุด
+  var LBLS=['16:48','16:58','17:08','17:18','17:28','17:38','17:48','17:58',
+            '18:08','18:18','18:28','18:38','18:48','18:58','19:08','19:18',
+            '19:28','19:38','19:43','20:38','20:49',
+            '22:35','22:39','22:45','22:49','22:51','23:01','23:07','23:13',
+            '23:27','23:43','23:59','00:17+','00:41+','01:15+','01:59+','02:59+','03:59+'];
+
+  var ds=snaps.slice(0,DISPLAY_MAX+1);
+
+  // เส้นหลัก: null ที่ G1_POST (20:38) และ G2_POST (22:35)
+  // ทำให้เส้นหลักแบ่งเป็น 3 ท่อน: ก่อน gap1 | ระหว่าง gap1-gap2 | หลัง gap2
+  // แต่ spanning null ทำให้ท่อนกลาง (G1_POST–G2_PRE) ไม่ติดกัน
+  // จึงใช้ dataset แยกสำหรับช่วง 20:38–20:49
+  var mainV=ds.map(function(s,i){
+    if(i===G1_POST||i===G2_POST) return null;
+    return M(s.v);
+  });
+  var mainP=ds.map(function(s,i){
+    if(i===G1_POST||i===G2_POST) return null;
+    return M(s.p);
+  });
+
+  // dataset สำหรับช่วง 20:38–20:49 (ระหว่าง gap1 และ gap2)
+  var betweenV=ds.map(function(s,i){
+    if(i===G1_POST||i===G2_PRE) return M(s.v);
+    return null;
+  });
+  var betweenP=ds.map(function(s,i){
+    if(i===G1_POST||i===G2_PRE) return M(s.p);
+    return null;
+  });
+
+  // เส้น flatline ช่วง gap1 (19:43 → 20:38)
+  var g1V=ds.map(function(s,i){
+    if(i===G1_PRE) return M(s.v);
+    if(i===G1_POST) return M(snaps[G1_PRE].v);
+    return null;
+  });
+  var g1P=ds.map(function(s,i){
+    if(i===G1_PRE) return M(s.p);
+    if(i===G1_POST) return M(snaps[G1_PRE].p);
+    return null;
+  });
+  // เส้น flatline ช่วง gap2 (20:49 → 22:35)
+  var g2V=ds.map(function(s,i){
+    if(i===G2_PRE) return M(s.v);
+    if(i===G2_POST) return M(snaps[G2_PRE].v);
+    return null;
+  });
+  var g2P=ds.map(function(s,i){
+    if(i===G2_PRE) return M(s.p);
+    if(i===G2_POST) return M(snaps[G2_PRE].p);
+    return null;
+  });
+
+  var xVals=MIN.slice(0,DISPLAY_MAX+1);
+
+  // Gap shading plugin — ใช้ค่า x = minutes
+  var gapPlugin={id:'gpm',beforeDraw:function(ch){
+    var ctx=ch.ctx,sc=ch.scales.x,t=ch.chartArea.top,b=ch.chartArea.bottom;
+    function sh(x0min,x1min,col){
+      var px0=sc.getPixelForValue(x0min), px1=sc.getPixelForValue(x1min);
+      ctx.save();
+      ctx.fillStyle=col+'22'; ctx.fillRect(px0,t,px1-px0,b-t);
+      ctx.strokeStyle=col; ctx.lineWidth=1.4; ctx.setLineDash([5,4]);
+      ctx.beginPath(); ctx.moveTo(px0,t); ctx.lineTo(px0,b); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px1,t); ctx.lineTo(px1,b); ctx.stroke();
+      ctx.setLineDash([]); ctx.restore();
+    }
+    sh(MIN[G1_PRE], MIN[G1_POST], '#E67E22');
+    sh(MIN[G2_PRE], MIN[G2_POST], '#C0392B');
+  }};
+
+  new Chart(document.getElementById('cTurnout'),{
+    type:'line', plugins:[gapPlugin],
+    data:{
+      labels:xVals,
+      datasets:[
+        {label:'ส.ส.เขต',data:mainV,borderColor:'#2E8B57',backgroundColor:'rgba(46,139,87,0.07)',
+         borderWidth:2.5,pointRadius:xVals.map(function(x,i){
+           return(i===G1_PRE||i===G2_PRE)?5:2;
+         }),pointBackgroundColor:'#2E8B57',fill:true,tension:0.3,spanGaps:false,order:3},
+        {label:'ส.ส.บัญชีรายชื่อ',data:mainP,borderColor:'#E91E8C',borderWidth:2,
+         pointRadius:1.5,pointBackgroundColor:'#E91E8C',
+         fill:false,tension:0.3,spanGaps:false,order:3},
+        {label:'_bv',data:betweenV,borderColor:'#2E8B57',borderWidth:2.5,
+         pointRadius:xVals.map(function(x,i){return i===G1_POST?5:i===G2_PRE?5:0;}),
+         pointBackgroundColor:'#2E8B57',fill:false,tension:0.3,spanGaps:false,order:3},
+        {label:'_bp',data:betweenP,borderColor:'#E91E8C',borderWidth:2,
+         pointRadius:0,fill:false,tension:0.3,spanGaps:false,order:3},
+        {label:'_g1v',data:g1V,borderColor:'#2E8B57',borderWidth:2.5,borderDash:[9,5],
+         pointRadius:xVals.map(function(x,i){return i===G1_POST?7:0;}),
+         pointBackgroundColor:'#E67E22',fill:false,tension:0,spanGaps:false,order:1},
+        {label:'_g1p',data:g1P,borderColor:'#E91E8C',borderWidth:1.8,borderDash:[9,5],
+         pointRadius:0,fill:false,tension:0,spanGaps:false,order:1},
+        {label:'_g2v',data:g2V,borderColor:'#2E8B57',borderWidth:2.5,borderDash:[9,5],
+         pointRadius:xVals.map(function(x,i){return i===G2_POST?7:0;}),
+         pointBackgroundColor:'#C0392B',fill:false,tension:0,spanGaps:false,order:1},
+        {label:'_g2p',data:g2P,borderColor:'#E91E8C',borderWidth:1.8,borderDash:[9,5],
+         pointRadius:0,fill:false,tension:0,spanGaps:false,order:1}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{
+        filter:function(i){return i.dataset.label&&!i.dataset.label.startsWith('_')&&i.raw!==null;},
+        callbacks:{
+          title:function(it){
+            if(!it||!it.length)return'';
+            var idx=it[0].dataIndex;
+            return LBLS[idx]||'';
+          },
+          label:function(i){if(i.raw===null)return null;return ' '+i.dataset.label+': '+Number(i.raw).toFixed(3)+'M';},
+          afterBody:function(it){
+            if(!it||!it.length)return[];
+            var idx=it[0].dataIndex,s=snaps[idx];if(!s)return[];
+            var pct=(s.v/FINAL_TO*100).toFixed(2);
+            var delta=idx===0?s.v:s.v-snaps[idx-1].v;
+            var dp=(delta/FINAL_TO*100).toFixed(2);
+            var lines=[' % สะสม: '+pct+'%',' +เพิ่ม: +'+delta.toLocaleString()+' (+'+dp+'%)'];
+            if(idx===G1_POST)lines.push(' ⚠ กระโดด +5.65M หลัง GAP 1 (55 นาที)');
+            if(idx===G2_POST)lines.push(' ⚠ กระโดด +17.05M หลัง GAP 2 (106 นาที)');
+            return lines;
+          }
+        }
+      }},
+      scales:{
+        x:{type:'linear',
+           ticks:{font:{size:9},maxRotation:50,autoSkip:true,maxTicksLimit:22,
+             callback:function(val){
+               var idx=xVals.indexOf(val);
+               return idx>=0?LBLS[idx]:'';
+             }
+           },
+           grid:{color:'rgba(0,0,0,0.04)'},
+           title:{display:false}
+        },
+        y:{ticks:{callback:function(v){return v.toFixed(1)+'M';},font:{size:10}},
+           grid:{color:'rgba(0,0,0,0.05)'},
+           title:{display:true,text:'จำนวนผู้ใช้สิทธิ์ (ล้านคน)',font:{size:10}}}
+      }
+    }
+  });
+  // Turnout table
+  var tbody=document.getElementById('turnoutBody');
+  snaps.forEach(function(s,i){
+    var pct=(s.v/FINAL_TO*100).toFixed(3);
+    var delta=i===0?s.v:s.v-snaps[i-1].v;
+    var dp=(delta/FINAL_TO*100).toFixed(3);
+    var isFlat=i>0&&s.v===snaps[i-1].v;
+    var isG1=i===G1_POST, isG2=i===G2_POST;
+    var tag='';
+    if(isG1) tag='<span class="tag tag-g1">JUMP GAP1</span>';
+    else if(isG2) tag='<span class="tag tag-g2">JUMP GAP2</span>';
+    else if(isFlat) tag='<span class="tag tag-flat">FLAT</span>';
+    else if(delta>1e6) tag='<span class="tag tag-jump">JUMP</span>';
+    var bw=Math.min(100,parseFloat(pct));
+    var bc=isG1||isG2?'#C0392B':delta>1e6?'#E67E22':'#2E8B57';
+    var bg=isG1?'background:#FEF9E7':isG2?'background:#FFECEC':isFlat?'background:#fafafa':'';
+    var tr=document.createElement('tr');
+    if(bg) tr.setAttribute('style',bg);
+    tr.innerHTML='<td><b>'+s.t+'</b></td>'+
+      '<td class="num">'+s.v.toLocaleString()+'</td>'+
+      '<td class="num"><b>'+pct+'%</b></td>'+
+      '<td><div class="pct-bar-wrap"><div class="pct-bar-bg"><div class="pct-bar-fill" style="width:'+bw+'%;background:'+bc+'"></div></div>'+
+      '<span style="font-size:10px;color:#888;min-width:36px;text-align:right">'+pct+'%</span></div></td>'+
+      '<td class="num" style="color:'+(isG1||isG2?'#C0392B':isFlat?'#aaa':'#2E8B57')+'">'+(i===0?'—':'+'+delta.toLocaleString())+'</td>'+
+      '<td class="num" style="color:'+(isG1||isG2?'#C0392B':isFlat?'#aaa':'#2E8B57')+'">'+(i===0?'—':'+'+dp+'%')+'</td>'+
+      '<td>'+tag+'</td>';
+    tbody.appendChild(tr);
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// DIVERGING BAR
+// ═══════════════════════════════════════════════════
+new Chart(document.getElementById('cDivBar'),{
+  type:'bar',
+  data:{
+    labels:['ภูมิใจไทย','เพื่อไทย','กล้าธรรม','ประชาธิปัตย์','ประชาชน'],
+    datasets:[{
+      label:'ผลต่าง % ณ 19:43 − final',
+      data:[5.6,2.5,1.7,-2.0,-6.4],
+      backgroundColor:['#185FA5CC','#E24B4ACC','#3B6D11CC','#378ADDCC','#E07B00CC'],
+      borderRadius:4,borderWidth:0
+    }]
+  },
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:function(i){var s=i.raw>=0?'+':'';return ' '+s+i.raw+'% เทียบ final share';}}},
+      annotation:{annotations:{zero:{type:'line',xMin:0,xMax:0,borderColor:'#333',borderWidth:1}}}
+    },
+    scales:{
+      x:{min:-10,max:9,ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:10}},
+         grid:{color:'rgba(0,0,0,0.06)'}},
+      y:{ticks:{font:{size:12},color:'#333'},grid:{display:false}}
+    }
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// REPORTED % BAR
+// ═══════════════════════════════════════════════════
+new Chart(document.getElementById('cReported'),{
+  type:'bar',
+  data:{
+    labels:['ภูมิใจไทย\n(175 เขต)','เพื่อไทย\n(60 เขต)','กล้าธรรม\n(55 เขต)','ประชาธิปัตย์\n(10 เขต)','ประชาชน\n(85 เขต)'],
+    datasets:[
+      {label:'รายงานแล้ว',data:[100,100,100,80,75.3],
+       backgroundColor:['#185FA5CC','#E24B4ACC','#3B6D11CC','#378ADDCC','#E07B00CC'],
+       borderRadius:3,borderWidth:0,stack:'s'},
+      {label:'ยังไม่รายงาน',data:[0,0,0,20,24.7],
+       backgroundColor:['#185FA522','#E24B4A22','#3B6D1122','#378ADD22','#E07B0022'],
+       borderRadius:3,borderWidth:1,
+       borderColor:['#185FA566','#E24B4A66','#3B6D1166','#378ADD66','#E07B0066'],stack:'s'}
+    ]
+  },
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,position:'bottom',labels:{font:{size:10},boxWidth:8,padding:10}},
+      tooltip:{callbacks:{label:function(i){return ' '+i.dataset.label+': '+i.raw+'%';}}}},
+    scales:{
+      x:{min:0,max:105,ticks:{callback:function(v){return v+'%';},font:{size:9}},grid:{color:'rgba(0,0,0,0.04)'}},
+      y:{ticks:{font:{size:10}},grid:{display:false}}
+    }
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// DOT GRID 85 PPP
+// ═══════════════════════════════════════════════════
+(function(){
+  var groups=[{g:'leading',n:47},{g:'has_votes',n:17},{g:'none',n:21}];
+  var cols={leading:'#E07B00',has_votes:'#F0C080',none:'#ccc'};
+  var grid=document.getElementById('dotGrid');
+  groups.forEach(function(gd){
+    for(var k=0;k<gd.n;k++){
+      var d=document.createElement('div');
+      d.style.cssText='width:13px;height:13px;border-radius:50%;background:'+cols[gd.g]+
+        ';border:'+(gd.g==='none'?'1px dashed #aaa':'1px solid '+cols[gd.g])+';display:inline-block;';
+      grid.appendChild(d);
+    }
+  });
+})();
+
+// 21 เขต cards
+(function(){
+  var c=document.getElementById('miss21');
+  missing21.forEach(function(d){
+    var isK=d.prov==='กรุงเทพมหานคร';
+    var el=document.createElement('div');
+    el.className='miss-card';
+    el.style.cssText='background:'+(isK?'#FEF9E7':'#FFF0F0')+';border-color:'+(isK?'#E07B00':'#C0392B');
+    el.innerHTML='<div style="font-size:10px;color:#888">'+d.prov+'</div>'+
+      '<div style="font-size:13px;font-weight:700">เขต '+d.cons+'</div>'+
+      '<div style="font-size:11px;color:#E07B00;margin-top:.1rem">PPP final: '+d.votes.toLocaleString()+'</div>'+
+      '<div style="font-size:9px;color:#aaa">0 คะแนน ณ 19:43 น.</div>';
+    c.appendChild(el);
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// LEAD TIMELINE
+// ═══════════════════════════════════════════════════
+(function(){
+  var ls=leadSnaps, ll=ls.map(function(s){return s.t;});
+  var G1=14, G2=15, G3=16, G4=17;
+  var gapPl=makeGapPlugin(G1,G2,G3,G4);
+  new Chart(document.getElementById('cLeadTimeline'),{
+    type:'line',plugins:[gapPl],
+    data:{labels:ll,datasets:[
+      {label:'ภูมิใจไทย',data:ls.map(function(s){return s.bjt;}),borderColor:'#185FA5',
+       backgroundColor:'rgba(24,95,165,0.07)',borderWidth:2.5,
+       pointRadius:ls.map(function(s,i){return i===G2?8:2.5;}),
+       pointBackgroundColor:ls.map(function(s,i){return i===G2?'#E67E22':'#185FA5';}),
+       fill:true,tension:0.3},
+      {label:'ประชาชน',data:ls.map(function(s){return s.ppp;}),borderColor:'#E07B00',
+       backgroundColor:'rgba(224,123,0,0.05)',borderWidth:2.5,pointRadius:2.5,
+       pointBackgroundColor:'#E07B00',fill:true,tension:0.3},
+      {label:'final 175',data:ll.map(function(){return 175;}),borderColor:'#185FA5',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false},
+      {label:'final 85', data:ll.map(function(){return 85;}), borderColor:'#E07B00',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{
+        title:function(it){return ls[it[0].dataIndex]?ls[it[0].dataIndex].t:'';},
+        label:function(i){return ' '+i.dataset.label+': '+i.raw+' เขต';}
+      }}},
+      scales:{
+        x:{ticks:{font:{size:9},maxRotation:50,autoSkip:true,maxTicksLimit:16},grid:{color:'rgba(0,0,0,0.04)'}},
+        y:{min:0,max:195,ticks:{font:{size:10},stepSize:25},grid:{color:'rgba(0,0,0,0.04)'},
+           title:{display:true,text:'จำนวนเขต',font:{size:10}}}
+      }
+    }
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// BALLOT DIFF
+
+// ═══════════════════════════════════════════════════
+// BALLOT DIFF — forensics style (bar สีตามระดับ)
+// ═══════════════════════════════════════════════════
+(function(){
+  var bdL=['16:48','17:48','18:08','18:28','18:48','19:08','19:28','19:43','20:38','20:49',
+    '22:35','22:39','22:45','22:49','22:51','23:01','23:13','23:27','23:43','23:59',
+    '00:17+','00:41+','01:15+','01:59+','02:59+','03:59+','08:53+','15:51+'];
+  var bdD=[559,2477,21236,99272,228475,344589,468088,553973,892504,906825,
+    396331,370546,328810,339898,333601,296855,249027,192629,134271,120488,
+    115096,86710,69766,42344,37544,40698,39677,37883].map(function(v){return v/1000;});
+  new Chart(document.getElementById('chart3a'),{
+    type:'bar',
+    data:{labels:bdL,datasets:[{
+      label:'ผลต่าง (บัตรเขต − บัตรลิสต์) พันใบ',
+      data:bdD,
+      backgroundColor:bdD.map(function(v){return v>500?'rgba(192,57,43,0.8)':v>200?'rgba(230,126,34,0.8)':'rgba(52,152,219,0.8)';}),
+      borderColor:bdD.map(function(v){return v>500?'#C0392B':v>200?'#E67E22':'#2980B9';}),
+      borderWidth:1,borderRadius:3
+    }]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:function(i){return ' ผลต่าง: '+(i.raw*1000).toLocaleString()+' ใบ';}}}
+      },
+      scales:{
+        x:{ticks:{font:{size:9},maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},
+        y:{title:{display:true,text:'พันใบ (×1,000)',font:{size:10}},
+           ticks:{callback:function(v){return v+'K';},font:{size:10}},grid:{color:'rgba(0,0,0,0.04)'}}
+      }
+    }
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// VGT — forensics style (สีม่วงเฉพาะค่า > 0)
+// ═══════════════════════════════════════════════════
+(function(){
+  var vtL=['16:48','17:08','17:28','17:48','18:08','18:28','18:48','19:08','19:28','19:43',
+    '20:38','20:49','22:35','22:39','22:45','22:49','22:51','23:01','23:13','23:31','23:59'];
+  var vtD=[0,0,0,0,0,0,0,0,0,0,0,0,47,49,46,0,0,0,0,0,0];
+  new Chart(document.getElementById('chart3b'),{
+    type:'bar',
+    data:{labels:vtL,datasets:[{
+      label:'จำนวนเขตที่ valid_votes > turn_out',
+      data:vtD,
+      backgroundColor:vtD.map(function(v){return v>0?'rgba(142,68,173,0.85)':'rgba(200,200,200,0.4)';}),
+      borderColor:vtD.map(function(v){return v>0?'#8E44AD':'#ccc';}),
+      borderWidth:1,borderRadius:3
+    }]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:function(i){return i.raw>0?' '+i.raw+' เขต (เป็นไปไม่ได้ทางคณิตศาสตร์)':' 0 เขต (ปกติ)';}}}
+      },
+      scales:{
+        x:{ticks:{font:{size:9},maxRotation:45,autoSkip:false},grid:{display:false}},
+        y:{title:{display:true,text:'จำนวนเขต',font:{size:10}},
+           ticks:{font:{size:10},stepSize:10},grid:{color:'rgba(0,0,0,0.04)'},max:60}
+      }
+    }
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// DECREASE CHART
+// ═══════════════════════════════════════════════════
+new Chart(document.getElementById('cDecrease'),{
+  type:'bar',
+  data:{
+    labels:decEvents.map(function(d){return d.t;}),
+    datasets:[{
+      label:'คะแนนลดลง',
+      data:decEvents.map(function(d){return d.dec;}),
+      backgroundColor:'rgba(255,77,77,0.7)',borderRadius:2,borderWidth:0
+    }]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:function(i){return ' ลดลง: '+Number(i.raw).toLocaleString()+' คะแนน';}}}},
+    scales:{
+      x:{ticks:{font:{size:8},maxRotation:60,autoSkip:false},grid:{display:false}},
+      y:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9}},
+         title:{display:true,text:'คะแนนที่ลดลง',font:{size:10}}}
+    }
+  }
+});
+
+// ═══════════════════════════════════════════════════
+// PARTY DEC CHART
+// ═══════════════════════════════════════════════════
+new Chart(document.getElementById('cPartyDec'),{
+  type:'bar',
+  data:{
+    labels:partyDec.map(function(d){return d.p;}),
+    datasets:[{
+      label:'คะแนนที่ลดลงรวม',
+      data:partyDec.map(function(d){return d.total;}),
+      backgroundColor:'rgba(255,77,77,0.7)',borderRadius:3,borderWidth:0
+    }]
+  },
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:function(i){var d=partyDec[i.dataIndex];return ' ลด '+Number(i.raw).toLocaleString()+' คะแนน'+(d?' ('+d.pct+'%)':'');}}}},
+    scales:{
+      x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:10}},grid:{color:'rgba(0,0,0,0.04)'}},
+      y:{ticks:{font:{size:11}},grid:{display:false}}
+    }
+  }
+});
+
+// Top cands table
+(function(){
+  var partyColors={'ประชาชน':'p-ppp','ภูมิใจไทย':'p-bjt','กล้าธรรม':'p-kt','เพื่อไทย':'p-pt'};
+  var tbody=document.getElementById('topDecTable');
+  topCands.forEach(function(c,i){
+    var tr=document.createElement('tr');
+    var pc=partyColors[c.party]||'';
+    tr.innerHTML='<td>'+c.prov+'</td><td class="num">'+c.cons+'</td>'+
+      '<td><span class="pill '+pc+'">'+c.party+'</span></td>'+
+      '<td>'+c.name+'</td><td class="num" style="color:#C0392B;font-weight:600">'+c.dec.toLocaleString()+'</td>';
+    tbody.appendChild(tr);
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// FLIP CHART
+// ═══════════════════════════════════════════════════
+(function(){
+  var slots=['22:35','23:01','23:13','23:17','23:43','00:17+','00:33+'];
+  var cnt={};
+  slots.forEach(function(t){cnt[t]={ppp:0,bjt:0,kt:0,pt:0};});
+  flipData.forEach(function(f){
+    if(!cnt[f.t])return;
+    if(f.to==='ประชาชน')cnt[f.t].ppp++;
+    else if(f.to==='ภูมิใจไทย')cnt[f.t].bjt++;
+    else if(f.to==='กล้าธรรม')cnt[f.t].kt++;
+    else if(f.to==='เพื่อไทย')cnt[f.t].pt++;
+  });
+  new Chart(document.getElementById('cFlip'),{
+    type:'bar',
+    data:{labels:slots,datasets:[
+      {label:'ประชาชนได้',data:slots.map(function(t){return cnt[t].ppp;}),backgroundColor:'#E07B00CC',borderRadius:3,borderWidth:0,stack:'s'},
+      {label:'ภูมิใจไทยได้',data:slots.map(function(t){return cnt[t].bjt;}),backgroundColor:'#185FA5CC',borderRadius:3,borderWidth:0,stack:'s'},
+      {label:'กล้าธรรมได้',data:slots.map(function(t){return cnt[t].kt;}),backgroundColor:'#3B6D11CC',borderRadius:3,borderWidth:0,stack:'s'},
+      {label:'เพื่อไทยได้',data:slots.map(function(t){return cnt[t].pt;}),backgroundColor:'#E24B4ACC',borderRadius:3,borderWidth:0,stack:'s'}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:true,position:'right',labels:{font:{size:10},boxWidth:8,padding:8}},
+        tooltip:{callbacks:{label:function(i){return ' '+i.dataset.label+': '+i.raw+' เขต';}}}},
+      scales:{
+        x:{ticks:{font:{size:11},color:'#444'},grid:{display:false}},
+        y:{ticks:{stepSize:1,font:{size:10}},grid:{color:'rgba(0,0,0,0.04)'},
+           title:{display:true,text:'เขตที่พลิก',font:{size:10}}}
+      }
+    }
+  });
+  // Flip table
+  var pills={'ประชาชน':'p-ppp','ภูมิใจไทย':'p-bjt','กล้าธรรม':'p-kt','เพื่อไทย':'p-pt'};
+  var tbody=document.getElementById('flipTable');
+  flipData.forEach(function(f,i){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><b style="color:'+f.col+'">'+f.t+'</b></td>'+
+      '<td>'+f.จ+'</td><td class="num">'+f.เ+'</td>'+
+      '<td><span class="pill '+(pills[f.from]||'')+'">'+f.from+'</span></td>'+
+      '<td><span class="pill '+(pills[f.to]||'')+'">'+f.to+'</span></td>';
+    tbody.appendChild(tr);
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// PARTY SHARE DIFF TIMELINE (กราฟ 1 ในส่วน GAP2)
+// ═══════════════════════════════════════════════════
+(function(){
+  var labels=['16:48','17:38','17:48','17:58','18:08','18:18','18:28','18:38','18:48','18:58',
+    '19:08','19:18','19:28','19:38','19:43','20:38','20:49','22:35','22:39','22:45',
+    '22:49','22:51','23:01','23:07','23:13','23:31','23:59','00:17+','00:41+','01:15+',
+    '01:59+','02:59+','03:59+','08:53+','15:51+'];
+  var bjt=[17.7,26.8,42.5,39.2,42.7,42.9,39.0,37.4,37.4,37.7,38.0,37.7,37.3,37.0,36.9,35.2,34.9,32.5,32.4,32.3,32.3,32.2,32.1,32.0,31.9,31.7,31.6,31.5,31.5,31.4,31.4,31.4,31.3,31.3,31.3];
+  var ppp=[16.4,17.3,14.4,15.3,16.7,16.5,17.1,17.6,17.8,18.0,18.1,18.1,18.1,18.1,18.2,19.6,19.8,22.6,22.8,22.9,22.9,23.0,23.2,23.3,23.4,23.7,24.0,24.1,24.2,24.4,24.5,24.5,24.6,24.6,24.6];
+  var FBJT=31.3, FPPP=24.6;
+  var dbjt=bjt.map(function(v){return parseFloat((v-FBJT).toFixed(2));});
+  var dppp=ppp.map(function(v){return parseFloat((v-FPPP).toFixed(2));});
+  var N=labels.length, G1=14, G2=20;
+  var gapPlg={id:'gps',beforeDraw:function(ch){
+    var ctx=ch.ctx,x=ch.scales.x,t=ch.chartArea.top,b=ch.chartArea.bottom;
+    function sh(i,col){var x0=x.getPixelForValue(i);ctx.save();ctx.strokeStyle=col;ctx.lineWidth=1.2;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(x0,t);ctx.lineTo(x0,b);ctx.stroke();ctx.setLineDash([]);ctx.restore();}
+    sh(G1,'#E67E22');sh(G2,'#C0392B');
+  }};
+  new Chart(document.getElementById('cPartyShareDiff'),{
+    type:'line',plugins:[gapPlg],
+    data:{labels:labels,datasets:[
+      {label:'ภูมิใจไทย (final 31.3%)',data:dbjt,borderColor:'#1F4E79',backgroundColor:'rgba(31,78,121,0.07)',
+       borderWidth:2.5,pointRadius:1.5,fill:true,tension:0.3},
+      {label:'ประชาชน (final 24.6%)',data:dppp,borderColor:'#E07B00',backgroundColor:'rgba(224,123,0,0.05)',
+       borderWidth:2.5,pointRadius:1.5,fill:true,tension:0.3},
+      {label:'',data:labels.map(function(){return 0;}),borderColor:'#888',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:true,position:'top',labels:{font:{size:11},boxWidth:12}},
+        tooltip:{callbacks:{
+          title:function(it){return (it&&it.length&&labels[it[0].dataIndex])||'';},
+          label:function(i){if(!i.dataset.label)return null;return ' '+i.dataset.label+': '+(i.raw>=0?'+':'')+i.raw+'%';}
+        }}
+      },
+      scales:{
+        x:{ticks:{font:{size:9},maxRotation:50,autoSkip:true,maxTicksLimit:18},grid:{color:'rgba(0,0,0,0.03)'}},
+        y:{ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:9}},
+           grid:{color:'rgba(0,0,0,0.04)'},min:-15,max:15,
+           title:{display:true,text:'ผลต่างจาก final share',font:{size:9}}}
+      }
+    }
+  });
+})();
+
+// ═══════════════════════════════════════════════════
+// BALLOT DIFF PROVINCE + CONSTITUENCY CHARTS
+// ═══════════════════════════════════════════════════
+var PROV_DIFF=[{"prov_name":"พัทลุง","sum_diff":15644},{"prov_name":"ร้อยเอ็ด","sum_diff":-14584},{"prov_name":"ศรีสะเกษ","sum_diff":11321},{"prov_name":"สกลนคร","sum_diff":-8955},{"prov_name":"น่าน","sum_diff":8915},{"prov_name":"นครราชสีมา","sum_diff":-8446},{"prov_name":"ชลบุรี","sum_diff":7894},{"prov_name":"ยโสธร","sum_diff":7199},{"prov_name":"ตรัง","sum_diff":-6149},{"prov_name":"บุรีรัมย์","sum_diff":5684},{"prov_name":"อุดรธานี","sum_diff":-5279},{"prov_name":"ขอนแก่น","sum_diff":5205},{"prov_name":"เพชรบูรณ์","sum_diff":5194},{"prov_name":"สตูล","sum_diff":5116},{"prov_name":"ชุมพร","sum_diff":4885},{"prov_name":"หนองบัวลำภู","sum_diff":-4690},{"prov_name":"สุพรรณบุรี","sum_diff":4508},{"prov_name":"ปัตตานี","sum_diff":-4296},{"prov_name":"ลพบุรี","sum_diff":4201},{"prov_name":"อุบลราชธานี","sum_diff":-4082}];
+
+var BIG_CONS=[{"prov_name":"ศรีสะเกษ","cons_no":6,"diff":10408,"party":"ภูมิใจไทย"},{"prov_name":"น่าน","cons_no":2,"diff":8806,"party":"กล้าธรรม"},{"prov_name":"พัทลุง","cons_no":1,"diff":8421,"party":"ภูมิใจไทย"},{"prov_name":"ร้อยเอ็ด","cons_no":5,"diff":-8233,"party":"เพื่อไทย"},{"prov_name":"ยโสธร","cons_no":1,"diff":8102,"party":"ภูมิใจไทย"},{"prov_name":"พัทลุง","cons_no":2,"diff":7445,"party":"ภูมิใจไทย"},{"prov_name":"อุดรธานี","cons_no":1,"diff":-6531,"party":"เพื่อไทย"},{"prov_name":"ร้อยเอ็ด","cons_no":3,"diff":-6324,"party":"กล้าธรรม"},{"prov_name":"เพชรบูรณ์","cons_no":3,"diff":5823,"party":"ภูมิใจไทย"},{"prov_name":"บุรีรัมย์","cons_no":5,"diff":5719,"party":"ภูมิใจไทย"},{"prov_name":"ชุมพร","cons_no":1,"diff":5694,"party":"ภูมิใจไทย"},{"prov_name":"บุรีรัมย์","cons_no":9,"diff":-5483,"party":"ภูมิใจไทย"},{"prov_name":"ตรัง","cons_no":3,"diff":-5470,"party":"ประชาธิปัตย์"},{"prov_name":"ขอนแก่น","cons_no":1,"diff":5382,"party":"ประชาชน"},{"prov_name":"พิษณุโลก","cons_no":5,"diff":-5104,"party":"ภูมิใจไทย"},{"prov_name":"บุรีรัมย์","cons_no":4,"diff":5042,"party":"ภูมิใจไทย"},{"prov_name":"สตูล","cons_no":1,"diff":4839,"party":"ภูมิใจไทย"},{"prov_name":"ชลบุรี","cons_no":10,"diff":4734,"party":"ประชาชน"},{"prov_name":"พิษณุโลก","cons_no":4,"diff":4662,"party":"ภูมิใจไทย"},{"prov_name":"สกลนคร","cons_no":6,"diff":-4589,"party":"ภูมิใจไทย"}];
+
+var VGT_PROV=[{"prov_name":"ร้อยเอ็ด","n":3,"tot":9199},{"prov_name":"สุรินทร์","n":3,"tot":7988},{"prov_name":"นครศรีธรรมราช","n":2,"tot":7378},{"prov_name":"ยโสธร","n":2,"tot":6073},{"prov_name":"นนทบุรี","n":3,"tot":5538},{"prov_name":"สุราษฎร์ธานี","n":1,"tot":5422},{"prov_name":"แพร่","n":1,"tot":4883},{"prov_name":"ชัยภูมิ","n":2,"tot":3559},{"prov_name":"กรุงเทพมหานคร","n":2,"tot":3440},{"prov_name":"พะเยา","n":2,"tot":3246},{"prov_name":"นราธิวาส","n":2,"tot":2966},{"prov_name":"ขอนแก่น","n":2,"tot":2946},{"prov_name":"อุบลราชธานี","n":1,"tot":2775},{"prov_name":"พัทลุง","n":1,"tot":2552},{"prov_name":"หนองบัวลำภู","n":2,"tot":2510},{"prov_name":"ศรีสะเกษ","n":2,"tot":2119},{"prov_name":"นครพนม","n":1,"tot":2116},{"prov_name":"มหาสารคาม","n":1,"tot":2068},{"prov_name":"กาญจนบุรี","n":1,"tot":2049},{"prov_name":"กาฬสินธุ์","n":2,"tot":1772},{"prov_name":"เพชรบูรณ์","n":1,"tot":1651},{"prov_name":"หนองคาย","n":1,"tot":1570},{"prov_name":"อุดรธานี","n":2,"tot":1333},{"prov_name":"น่าน","n":1,"tot":1207},{"prov_name":"สงขลา","n":2,"tot":686},{"prov_name":"ปัตตานี","n":1,"tot":607},{"prov_name":"ตรัง","n":2,"tot":597},{"prov_name":"พังงา","n":1,"tot":491},{"prov_name":"บุรีรัมย์","n":1,"tot":395},{"prov_name":"นครปฐม","n":1,"tot":262}];
+
+var VGT_CONS=[{"prov_name":"สุราษฎร์ธานี","cons_no":1,"excess":5422,"party":"ภูมิใจไทย"},{"prov_name":"แพร่","cons_no":1,"excess":4883,"party":"ภูมิใจไทย"},{"prov_name":"ร้อยเอ็ด","cons_no":8,"excess":4753,"party":"เพื่อไทย"},{"prov_name":"ร้อยเอ็ด","cons_no":4,"excess":4109,"party":"เพื่อไทย"},{"prov_name":"นครศรีธรรมราช","cons_no":3,"excess":4087,"party":"ประชาธิปัตย์"},{"prov_name":"ยโสธร","cons_no":1,"excess":3794,"party":"ภูมิใจไทย"},{"prov_name":"นครศรีธรรมราช","cons_no":4,"excess":3291,"party":"ประชาธิปัตย์"},{"prov_name":"ชัยภูมิ","cons_no":6,"excess":2990,"party":"ภูมิใจไทย"},{"prov_name":"สุรินทร์","cons_no":3,"excess":2960,"party":"ภูมิใจไทย"},{"prov_name":"สุรินทร์","cons_no":2,"excess":2781,"party":"ภูมิใจไทย"},{"prov_name":"อุบลราชธานี","cons_no":7,"excess":2775,"party":"ภูมิใจไทย"},{"prov_name":"พะเยา","cons_no":2,"excess":2652,"party":"กล้าธรรม"},{"prov_name":"พัทลุง","cons_no":2,"excess":2552,"party":"ภูมิใจไทย"},{"prov_name":"กรุงเทพมหานคร","cons_no":22,"excess":2353,"party":"ประชาชน"},{"prov_name":"ยโสธร","cons_no":3,"excess":2279,"party":"ภูมิใจไทย"},{"prov_name":"สุรินทร์","cons_no":6,"excess":2247,"party":"ภูมิใจไทย"},{"prov_name":"นราธิวาส","cons_no":4,"excess":2204,"party":"ภูมิใจไทย"},{"prov_name":"นนทบุรี","cons_no":3,"excess":2198,"party":"ประชาชน"},{"prov_name":"นครพนม","cons_no":3,"excess":2116,"party":"ภูมิใจไทย"},{"prov_name":"มหาสารคาม","cons_no":1,"excess":2068,"party":"ภูมิใจไทย"},{"prov_name":"กาญจนบุรี","cons_no":1,"excess":2049,"party":"เพื่อไทย"},{"prov_name":"ขอนแก่น","cons_no":5,"excess":1842,"party":"กล้าธรรม"},{"prov_name":"นนทบุรี","cons_no":5,"excess":1822,"party":"ประชาชน"},{"prov_name":"เพชรบูรณ์","cons_no":6,"excess":1651,"party":"ภูมิใจไทย"},{"prov_name":"หนองบัวลำภู","cons_no":2,"excess":1627,"party":"เพื่อไทย"},{"prov_name":"หนองคาย","cons_no":2,"excess":1570,"party":"พลังประชารัฐ"},{"prov_name":"ศรีสะเกษ","cons_no":5,"excess":1524,"party":"ภูมิใจไทย"},{"prov_name":"นนทบุรี","cons_no":2,"excess":1518,"party":"ประชาชน"},{"prov_name":"กาฬสินธุ์","cons_no":3,"excess":1236,"party":"กล้าธรรม"},{"prov_name":"น่าน","cons_no":2,"excess":1207,"party":"กล้าธรรม"},{"prov_name":"ขอนแก่น","cons_no":10,"excess":1104,"party":"ภูมิใจไทย"},{"prov_name":"กรุงเทพมหานคร","cons_no":12,"excess":1087,"party":"ประชาชน"},{"prov_name":"อุดรธานี","cons_no":6,"excess":1085,"party":"ภูมิใจไทย"},{"prov_name":"หนองบัวลำภู","cons_no":3,"excess":883,"party":"กล้าธรรม"},{"prov_name":"นราธิวาส","cons_no":1,"excess":762,"party":"กล้าธรรม"},{"prov_name":"ปัตตานี","cons_no":1,"excess":607,"party":"ภูมิใจไทย"},{"prov_name":"ศรีสะเกษ","cons_no":3,"excess":595,"party":"ภูมิใจไทย"},{"prov_name":"พะเยา","cons_no":3,"excess":594,"party":"กล้าธรรม"},{"prov_name":"ชัยภูมิ","cons_no":3,"excess":569,"party":"ภูมิใจไทย"},{"prov_name":"สงขลา","cons_no":8,"excess":557,"party":"กล้าธรรม"},{"prov_name":"ตรัง","cons_no":4,"excess":548,"party":"ประชาธิปัตย์"},{"prov_name":"กาฬสินธุ์","cons_no":2,"excess":536,"party":"เพื่อไทย"},{"prov_name":"พังงา","cons_no":2,"excess":491,"party":"ภูมิใจไทย"},{"prov_name":"บุรีรัมย์","cons_no":5,"excess":395,"party":"ภูมิใจไทย"},{"prov_name":"ร้อยเอ็ด","cons_no":5,"excess":337,"party":"เพื่อไทย"},{"prov_name":"นครปฐม","cons_no":6,"excess":262,"party":"ประชาชน"},{"prov_name":"อุดรธานี","cons_no":5,"excess":248,"party":"ภูมิใจไทย"},{"prov_name":"สงขลา","cons_no":7,"excess":129,"party":"ภูมิใจไทย"},{"prov_name":"ตรัง","cons_no":1,"excess":49,"party":"ภูมิใจไทย"}];
+
+var VGT_PARTY=[{"party":"ภูมิใจไทย","count":25},{"party":"กล้าธรรม","count":8},{"party":"เพื่อไทย","count":6},{"party":"ประชาชน","count":6},{"party":"ประชาธิปัตย์","count":3},{"party":"พลังประชารัฐ","count":1}];
+
+(function(){
+  var partyC={ภูมิใจไทย:'p-bjt',ประชาชน:'p-ppp',เพื่อไทย:'p-pt',กล้าธรรม:'p-kt',ประชาธิปัตย์:'p-dp'};
+  function pill(p){var c=partyC[p]||'p-other';return '<span class="pill '+c+'">'+p+'</span>';}
+  function negpos(v){
+    if(v<0) return '<span style="color:#C0392B;font-weight:600">'+v.toLocaleString()+'</span>';
+    return '<span style="color:#185FA5;font-weight:600">+'+v.toLocaleString()+'</span>';
+  }
+
+  new Chart(document.getElementById('cProvDiffFull'),{
+    type:'bar',
+    data:{labels:PROV_DIFF.map(function(d){return d.prov_name;}),
+      datasets:[{label:'ส่วนต่างรวม (ใบ)',data:PROV_DIFF.map(function(d){return d.sum_diff;}),
+        backgroundColor:PROV_DIFF.map(function(d){return d.sum_diff>=0?'rgba(24,95,165,0.75)':'rgba(192,57,43,0.75)';}),
+        borderRadius:3,borderWidth:0}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return ' '+Number(i.raw).toLocaleString()+' ใบ';}}}},
+      scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9}},grid:{color:'rgba(0,0,0,0.04)'}},
+        y:{ticks:{font:{size:10}},grid:{display:false}}}}
+  });
+
+  var bd=document.getElementById('bigDiffBody');
+  BIG_CONS.forEach(function(r){
+    var tr=document.createElement('tr');
+    tr.style.cssText='border-bottom:0.5px solid #f0f0f0';
+    tr.innerHTML='<td style="padding:5px 8px;font-size:12px;color:#444">'+r.prov_name+'</td>'+
+      '<td style="padding:5px 8px;text-align:center;font-size:12px;color:#444">'+r.cons_no+'</td>'+
+      '<td style="padding:5px 8px;text-align:right;font-size:12px">'+negpos(r.diff)+'</td>'+
+      '<td style="padding:5px 8px">'+pill(r.party)+'</td>';
+    bd.appendChild(tr);
+  });
+
+  new Chart(document.getElementById('cVgtProvFull'),{
+    type:'bar',
+    data:{labels:VGT_PROV.map(function(d){return d.prov_name+' ('+d.n+')';}),
+      datasets:[{label:'excess รวม',data:VGT_PROV.map(function(d){return d.tot;}),
+        backgroundColor:'rgba(142,68,173,0.75)',borderRadius:3,borderWidth:0}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return ' excess '+Number(i.raw).toLocaleString()+' คะแนน';}}}},
+      scales:{x:{ticks:{font:{size:9}},grid:{color:'rgba(0,0,0,0.04)'}},
+        y:{ticks:{font:{size:10}},grid:{display:false}}}}
+  });
+
+  var vb=document.getElementById('vgtConsBody');
+  VGT_CONS.forEach(function(r){
+    var tr=document.createElement('tr');
+    tr.style.cssText='border-bottom:0.5px solid #f0f0f0';
+    tr.innerHTML='<td style="padding:4px 6px;font-size:11.5px;color:#444;white-space:nowrap">'+r.prov_name+'</td>'+
+      '<td style="padding:4px 6px;text-align:center;font-size:11.5px;color:#444">'+r.cons_no+'</td>'+
+      '<td style="padding:4px 6px;text-align:right;font-size:11.5px;color:#8E44AD;font-weight:600">+'+r.excess.toLocaleString()+'</td>'+
+      '<td style="padding:4px 6px">'+pill(r.party)+'</td>';
+    vb.appendChild(tr);
+  });
+
+  var pcols=['rgba(24,95,165,0.75)','rgba(59,109,17,0.75)','rgba(226,75,74,0.75)','rgba(224,123,0,0.75)','rgba(55,138,221,0.75)','rgba(136,136,136,0.75)'];
+  new Chart(document.getElementById('cVgtPartyFull'),{
+    type:'bar',
+    data:{labels:VGT_PARTY.map(function(d){return d.party+' ('+d.count+')';}),
+      datasets:[{label:'จำนวนเขต',data:VGT_PARTY.map(function(d){return d.count;}),
+        backgroundColor:pcols,borderRadius:4,borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return ' '+i.raw+' เขต';}}}},
+      scales:{x:{ticks:{font:{size:11}},grid:{display:false}},
+        y:{ticks:{stepSize:5,font:{size:9}},grid:{color:'rgba(0,0,0,0.04)'},
+           title:{display:true,text:'จำนวนเขต',font:{size:9}}}}}
+  });
+})();
+
+</script>
+</body>
+</html>
